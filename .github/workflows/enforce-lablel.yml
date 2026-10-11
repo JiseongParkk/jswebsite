@@ -1,0 +1,17 @@
+name: Label Enforcer
+
+# Run action on pull request creation, reopening, or label changes
+on:
+  pull_request:
+    types: [opened, reopened, labeled, unlabeled]
+
+jobs:
+  # Ensure that PR has desired labels
+  enforce-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: yogevbd/enforce-label-action@2.2.2
+        with:
+          REQUIRED_LABELS_ANY: "feature,fix,maintenance"
+          REQUIRED_LABELS_ANY_DESCRIPTION: "The PR must have at least one these labels:
+            ['feature','fix','maintenance']"
