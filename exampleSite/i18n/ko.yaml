@@ -1,0 +1,15 @@
+skip: {other: "본문으로 건너뛰기"}
+menu: {other: "메뉴"}
+navigation: {other: "주요 메뉴"}
+backToTop: {other: "맨 위로"}
+viewRepository: {other: "저장소 보기"}
+viewActivity: {other: "학습 기록 보기"}
+learnMore: {other: "자세히 보기"}
+play: {other: "재생"}
+pause: {other: "일시정지"}
+reset: {other: "초기화"}
+brightness: {other: "표시 밝기"}
+source: {other: "원본과 이용 조건"}
+imageUnavailable: {other: "이미지를 불러오지 못했습니다. 원본 링크에서 확인해 주세요."}
+notFound: {other: "요청한 페이지를 찾을 수 없습니다."}
+returnHome: {other: "포트폴리오로 돌아가기"}
