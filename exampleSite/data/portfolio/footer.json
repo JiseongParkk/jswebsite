@@ -2,5 +2,6 @@
   "message": "의료영상을 배우고, 과정을 기록합니다.",
   "theme": "Built with Hugo · Based on Toha (MIT)",
   "sourceLabel": "출처와 참고 자료",
-  "updateLabel": "콘텐츠 정리"
+  "updateLabel": "콘텐츠 정리",
+  "buildLabel": "배포 버전 정보"
 }
