@@ -1,0 +1,2 @@
+@media(min-width:901px){.menu-toggle{display:none!important}}
+@media(max-width:900px){.nav-row{flex-wrap:wrap;padding-block:16px;gap:12px;min-height:80px}#main-nav{flex-basis:100%;flex-wrap:wrap;gap:4px 22px;padding:10px 0}#main-nav a{min-height:44px;display:flex;align-items:center}.menu-ready #main-nav:not(.is-open){display:none}.menu-ready #main-nav.is-open{display:flex}}
