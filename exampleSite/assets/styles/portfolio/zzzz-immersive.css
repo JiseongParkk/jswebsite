@@ -10,7 +10,7 @@
 .immersive .button{border-radius:3px;min-height:52px}
 .immersive .hero-secondary{border-color:transparent;padding-inline:14px}
 .mri-experience{min-width:0;position:relative;margin-left:-15px}
-.mri-stage{position:relative;perspective:1000px;isolation:isolate;aspect-ratio:1.12;display:grid;place-items:center;outline-offset:-5px}
+.mri-stage{position:relative;perspective:1000px;mix-blend-mode:screen;aspect-ratio:1.12;display:grid;place-items:center;outline-offset:-5px}
 .mri-object{position:relative;width:100%;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .18s ease-out;will-change:transform}
 .mri-object img{width:100%;height:auto;mix-blend-mode:screen;pointer-events:none;user-select:none}
 .mri-orbit{position:absolute;width:88%;aspect-ratio:1;border:1px solid #71969b45;border-radius:50%;pointer-events:none;transform:rotateX(55deg) rotateZ(-25deg);z-index:-1}
