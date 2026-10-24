@@ -1,13 +1,12 @@
 baseURL: "https://jiseongparkk.github.io/jswebsite/"
 title: "박지성 | 바이오메디컬공학 · 의료영상"
-languageCode: ko-KR
+locale: ko-KR
 defaultContentLanguage: ko
 enableRobotsTXT: true
 disableKinds: [taxonomy, term, RSS]
 languages:
   ko:
-    languageName: 한국어
-    languageCode: ko-KR
+    label: 한국어
     locale: ko-KR
     weight: 1
 module:
