@@ -1,0 +1,6 @@
+{{ $g := site.Data.portfolio.gallery }}
+<section class="section gallery" id="imaging" aria-labelledby="imaging-title"><div class="wrap"><p class="eyebrow">{{ $g.eyebrow }}</p><h2 class="section-heading" id="imaging-title">{{ $g.title }}</h2><p class="lede">{{ $g.intro }}</p>
+ <div class="image-grid">{{ range $g.items }}<figure class="image-card"><div class="image-card-top"><h3>{{ .name }}<small>{{ .subtitle }}</small></h3><span>{{ .plane }}</span></div><div class="scan-image"><img {{ if eq .name "CT" }}id="ct-image"{{ end }} src="{{ .image | relURL }}" width="{{ .width }}" height="{{ .height }}" alt="{{ .alt }}" loading="lazy" decoding="async"></div><figcaption><p>{{ .description }}</p><a href="{{ .source }}">{{ .credit }} <span aria-hidden="true">↗</span></a></figcaption></figure>{{ end }}</div>
+ <div class="viewer-controls" hidden><div><h3>{{ $g.viewerTitle }}</h3><p>{{ $g.viewerDescription }}</p></div><div class="brightness-control"><label for="ct-brightness">{{ i18n "brightness" }} <output id="ct-brightness-value" for="ct-brightness">100%</output></label><input id="ct-brightness" type="range" min="50" max="180" value="100" step="5"><button class="button" id="ct-reset" type="button">{{ i18n "reset" }}</button></div></div>
+ <p class="media-note">{{ $g.note }}</p>
+</div></section>
