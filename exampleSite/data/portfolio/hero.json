@@ -1,0 +1,19 @@
+{
+  "kicker": "SIGNAL → IMAGE → UNDERSTANDING",
+  "title": "신호를 이해하고,",
+  "accent": "영상의 가능성을 넓히다.",
+  "intro": "안녕하세요, 박지성입니다.",
+  "body": "바이오메디컬공학을 전공하며 의료영상 분야로 진로를 준비하고 있습니다. MRI와 CT가 인체를 담아내는 원리, 그리고 영상의 품질을 높이는 공학적 방법에 관심이 있습니다.",
+  "tags": [
+    "Biomedical Engineering",
+    "MRI · CT",
+    "Image Reconstruction"
+  ],
+  "figureLabel": "IMAGING NOTE / 01",
+  "figureTitle": "보이지 않는 신체를, 읽을 수 있는 신호로.",
+  "image": "images/portfolio/mri-brain.jpg",
+  "alt": "뇌와 머리의 중앙 부근을 옆에서 보여주는 MRI 시상면 예시 영상",
+  "caption": "뇌 MRI · 시상면 | everyone’s idle / CC BY-SA 2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:MRI_brain_sagittal_section.jpg",
+  "note": "공개 교육용 영상 · 개인 실습 결과와 별개"
+}
