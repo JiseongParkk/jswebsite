@@ -1,0 +1,12 @@
+{
+  "eyebrow": "INTERACTIVE / ACQUISITION",
+  "title": "측정 방향이 바뀌면, 얻는 정보도 달라집니다.",
+  "body": "CT에서는 다양한 방향에서 X선 투과 정보를 얻어 단면을 재구성합니다. 재생 버튼을 눌러 선원과 검출기가 움직이는 개념을 살펴보세요.",
+  "note": "직접 제작한 CT 획득 개념도입니다. 단일 광선을 단순화해 표현했으며 실제 장비의 구조·선량·촬영 프로토콜을 모사하지 않습니다.",
+  "sourceLabel": "X선원",
+  "detectorLabel": "검출기",
+  "centerLabel": "단면 모형",
+  "angleLabel": "회전 각도",
+  "diagramLabel": "CT 획득 개념도. 단면 모형을 중심으로 X선원과 검출기가 함께 회전합니다.",
+  "staticNote": "재생을 선택하면 움직입니다. JavaScript를 끈 경우에는 정지된 개념도를 확인할 수 있습니다."
+}
