@@ -1,0 +1,14 @@
+{{ $person := site.Data.portfolio.identity }}
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a class="brand" href="{{ site.Home.RelPermalink }}" aria-label="{{ $person.name }} {{ i18n "returnHome" }}">
+      <img src="{{ "images/portfolio/mark.svg" | relURL }}" width="38" height="38" alt="">
+      <span>{{ $person.name }}<small>MEDICAL IMAGING</small></span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" hidden>{{ i18n "menu" }} <span aria-hidden="true">＋</span></button>
+    <nav id="main-nav" aria-label="{{ i18n "navigation" }}">
+      {{ range site.Data.portfolio.navigation }}<a href="#{{ .id }}">{{ .label }}</a>{{ end }}
+      <a class="nav-github" href="{{ $person.github }}">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
