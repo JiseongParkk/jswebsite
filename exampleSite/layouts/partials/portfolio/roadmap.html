@@ -1,0 +1,2 @@
+{{ $r := site.Data.portfolio.roadmap }}
+<section class="section roadmap" id="roadmap" aria-labelledby="roadmap-title"><div class="wrap"><p class="eyebrow">{{ $r.eyebrow }}</p><h2 class="section-heading" id="roadmap-title">{{ $r.title }}</h2><p class="lede">{{ $r.intro }}</p><ol class="roadmap-list">{{ range $r.items }}<li><span class="step-label">{{ .step }}</span><h3>{{ .title }}</h3><p>{{ .action }}</p><small>{{ .output }}</small></li>{{ end }}</ol></div></section>
