@@ -13,6 +13,5 @@ payload = {
     'workflow': f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
     'hugo': '0.167.0 extended',
 }
-(public / 'build-info.json').write_text(json.dumps(payload, indent=2) + '
-', encoding='utf-8')
+(public / 'build-info.json').write_text(json.dumps(payload, indent=2) + chr(10), encoding='utf-8')
 print(json.dumps(payload, indent=2))
