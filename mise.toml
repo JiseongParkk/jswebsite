@@ -1,7 +1,7 @@
 [tools]
-hugo-extended = 'latest'
-node = 'latest'
-go = 'latest'
+hugo-extended = '0.167.0'
+node = '26.11.1'
+go = '1.27.2'
 
 [tasks.install]
 description = "Install root project dependencies"
