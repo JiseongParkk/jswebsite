@@ -7,6 +7,8 @@ on:
 
 jobs:
   update_release_draft:
+    # This inherited release automation belongs to the upstream theme.
+    if: github.repository == 'hugo-toha/toha'
     runs-on: ubuntu-latest
     steps:
     # Create/Update release draft
