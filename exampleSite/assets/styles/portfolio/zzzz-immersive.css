@@ -1,0 +1,45 @@
+/* Opt-in presentation changes. Existing page and section backgrounds are preserved. */
+.immersive{--content:1280px}
+.immersive .hero-grid{grid-template-columns:.95fr 1.15fr;gap:0;padding-block:60px 50px;min-height:690px}
+.immersive .hero-copy{position:relative;z-index:2}
+.immersive .hero-kicker{font-family:monospace;font-size:.72rem;letter-spacing:.19em;margin-bottom:30px}
+.immersive .hero h1{font-size:clamp(2.8rem,4.6vw,4.4rem);font-weight:800;line-height:1.25;letter-spacing:-.07em}
+.immersive .hero h1 span{display:inline-block;margin-top:4px}
+.immersive .hero-intro{font-size:1rem;margin-top:32px}
+.immersive .hero-description{max-width:390px;font-size:.95rem;line-height:1.9;margin-bottom:32px}
+.immersive .button{border-radius:3px;min-height:52px}
+.immersive .hero-secondary{border-color:transparent;padding-inline:14px}
+.mri-experience{min-width:0;position:relative;margin-left:-15px}
+.mri-stage{position:relative;perspective:1000px;isolation:isolate;aspect-ratio:1.12;display:grid;place-items:center;outline-offset:-5px}
+.mri-object{position:relative;width:100%;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .18s ease-out;will-change:transform}
+.mri-object img{width:100%;height:auto;mix-blend-mode:screen;pointer-events:none;user-select:none}
+.mri-orbit{position:absolute;width:88%;aspect-ratio:1;border:1px solid #71969b45;border-radius:50%;pointer-events:none;transform:rotateX(55deg) rotateZ(-25deg);z-index:-1}
+.orbit-two{width:74%;transform:rotateY(46deg) rotateZ(25deg);border-style:dashed;opacity:.5}
+.mri-annotation{position:absolute;font: .63rem monospace;letter-spacing:.13em;color:#bed8d5;display:flex;align-items:center;gap:12px;transform:translateZ(30px)}
+.mri-annotation::before{content:"";width:30px;height:1px;background:var(--mint)}
+.annotation-top{top:14%;left:3%}.annotation-bottom{bottom:14%;right:0}
+.mri-experience figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;color:#a6c1c8;font-size:.61rem;padding:0 15px}
+.mri-hint{color:#a6c1c8}.mri-controls{display:flex;gap:15px;justify-content:flex-end;padding:12px 15px 0}
+.mri-controls button{border:1px solid #53727b;border-radius:3px;background:transparent;color:#d5e8e7;font-size:.65rem;min-height:36px;padding:4px 12px}
+.mri-controls button[aria-pressed="true"]{border-color:var(--mint);color:var(--mint)}
+.immersive .hero-bottom{padding-block:25px;font-family:monospace;letter-spacing:.1em}
+.immersive .section{padding-block:90px}.immersive .section-heading{letter-spacing:-.06em}
+.immersive .about-grid{grid-template-columns:1.3fr 1fr;gap:10%}
+.immersive .profile-note{border:0;border-left:1px solid var(--line);border-radius:0;padding:8px 0 8px 45px}
+.immersive .profile-initial{border-radius:6px}
+.immersive .interest-grid{gap:0}.immersive .interest-card{border:0;border-left:1px solid var(--line);border-radius:0;padding:15px 32px}
+.immersive .interest-card:first-child{border-left:0;padding-left:0}.immersive .interest-card:last-child{padding-right:0}
+.immersive .card-top{padding-bottom:18px;margin-bottom:23px}.immersive .interest-card h3{font-size:1.25rem}
+.immersive .image-card{border-radius:4px}.immersive .image-card-top{padding:24px 28px}
+.immersive .scan-image{min-height:365px}.immersive .scan-image img{max-height:350px}
+.immersive .image-card figcaption p{min-height:0}.immersive .viewer-controls{border-radius:4px}
+.immersive .scanner-panel{border-radius:4px}.immersive .activity .section-head{margin-bottom:28px}
+.activity-disclosure{border-block:1px solid var(--line)}.activity-disclosure summary{cursor:pointer;min-height:66px;display:flex;align-items:center;justify-content:space-between;font-size:.95rem;font-weight:600;list-style:none}.activity-disclosure summary::-webkit-details-marker{display:none}.activity-disclosure[open] summary span{transform:rotate(45deg)}
+.activity-disclosure .activity-details{border-top:0}.activity-disclosure .activity-details>div:last-child{border-bottom:0}
+.immersive .sources{padding-block:60px}.immersive .source-list{margin-top:26px}
+@media(min-width:901px){.immersive .gallery .section-heading{font-size:3rem}.immersive .image-grid{grid-template-columns:1.15fr 1fr;align-items:start}.immersive .image-card:nth-child(2){margin-top:65px}}
+@media(max-width:1050px){.immersive .hero h1{font-size:3rem}.immersive .hero-grid{min-height:570px}.mri-annotation{font-size:.51rem}.mri-experience{margin-left:0}}
+@media(max-width:900px){.immersive .hero-grid{grid-template-columns:1fr 1fr;gap:10px;padding-block:45px}.immersive .hero h1{font-size:2.6rem}.immersive .hero-description{font-size:.83rem}.mri-stage{aspect-ratio:.9}.mri-experience figcaption{font-size:.55rem}.mri-hint{display:none}.mri-annotation{display:none}.immersive .interest-card,.immersive .interest-card:first-child,.immersive .interest-card:last-child{border-left:0;border-top:1px solid var(--line);padding:24px 0}.immersive .section{padding-block:65px}.immersive .profile-note{padding-left:25px}.immersive .scan-image{min-height:300px}}
+@media(max-width:600px){.immersive .hero-grid{grid-template-columns:1fr;padding-block:40px 25px;gap:0;min-height:0}.immersive .hero h1{font-size:clamp(2.5rem,10vw,3.7rem)}.immersive .hero-kicker{font-size:.6rem;margin-bottom:22px}.immersive .hero-intro{margin-top:25px}.immersive .hero-description{max-width:340px;margin-bottom:22px}.immersive .hero .button{font-size:.78rem;padding-inline:18px}.mri-experience{margin:10px -10px 0}.mri-stage{aspect-ratio:1.2}.mri-object{width:92%}.mri-experience figcaption{font-size:.59rem}.mri-controls{padding-top:8px}.immersive .hero-bottom{font-size:.52rem;gap:12px;justify-content:space-between}.immersive .hero-bottom span:first-child{display:none}.immersive .hero-bottom a{margin:0}.immersive .about-grid{grid-template-columns:1fr;gap:35px}.immersive .profile-note{padding-left:22px}.immersive .section{padding-block:55px}.immersive .scan-image{min-height:300px}.immersive .image-card-top{padding:20px}.immersive .section-heading{font-size:1.85rem}}
+@media(prefers-reduced-motion:reduce){.mri-object{transform:none!important;transition:none;will-change:auto}}
+@media print{.mri-controls,.mri-hint,.mri-orbit{display:none!important}.mri-object{transform:none!important}.mri-object img{mix-blend-mode:normal}.activity-disclosure::details-content{display:block}.immersive .section{padding-block:25px}}

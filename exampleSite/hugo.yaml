@@ -27,6 +27,7 @@ params:
   medicalPortfolio:
     enable: true
     animation: true
+    immersive: true
   description: "바이오메디컬공학을 전공하는 박지성의 의료영상 학습 포트폴리오. MRI와 CT, 영상 처리와 재구성에 대한 관심을 기록합니다."
   gitRepo: https://github.com/JiseongParkk/jswebsite
   gitBranch: main

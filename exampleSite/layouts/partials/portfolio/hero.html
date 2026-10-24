@@ -1,19 +1,23 @@
+{{ if site.Params.medicalPortfolio.immersive }}
 {{ $h := site.Data.portfolio.hero }}
-<section class="hero" aria-labelledby="hero-title">
+<section class="hero immersive-hero" aria-labelledby="hero-title">
  <div class="wrap hero-grid">
   <div class="hero-copy">
    <p class="hero-kicker">{{ $h.kicker }}</p>
    <h1 id="hero-title">{{ $h.title }}<br><span>{{ $h.accent }}</span></h1>
    <p class="hero-intro">{{ $h.intro }}</p>
    <p class="hero-description">{{ $h.body }}</p>
-   <div class="hero-tags">{{ range $h.tags }}<span>{{ . }}</span>{{ end }}</div>
-   <div class="links"><a class="button primary" href="#about">{{ i18n "learnMore" }} <span aria-hidden="true">↘</span></a><a class="button hero-secondary" href="#activity">{{ i18n "viewActivity" }} <span aria-hidden="true">→</span></a></div>
+   <div class="links"><a class="button primary" href="#gallery">{{ i18n "exploreImaging" }} <span aria-hidden="true">↘</span></a><a class="button hero-secondary" href="#activity">{{ i18n "viewActivity" }} <span aria-hidden="true">↗</span></a></div>
   </div>
-  <figure class="hero-figure">
-   <div class="image-label"><span>{{ $h.figureLabel }}</span><span aria-hidden="true">＋</span></div>
-   <img class="hero-mri" src="{{ $h.image | relURL }}" alt="{{ $h.alt }}" width="645" height="702" fetchpriority="high">
-   <figcaption><strong>{{ $h.figureTitle }}</strong><a href="{{ $h.source }}">{{ $h.caption }}</a><small>{{ $h.note }}</small></figcaption>
+  <figure class="mri-experience">
+   <div class="mri-stage" id="mri-stage" aria-label="{{ i18n "mriStage" }}">
+    <div class="mri-orbit orbit-one" aria-hidden="true"></div><div class="mri-orbit orbit-two" aria-hidden="true"></div>
+    <div class="mri-object"><img src="{{ $h.render | relURL }}" alt="{{ $h.renderAlt }}" width="1254" height="1254" fetchpriority="high"><span class="mri-annotation annotation-top" aria-hidden="true">{{ $h.renderLabel }}</span><span class="mri-annotation annotation-bottom" aria-hidden="true">{{ $h.renderDetail }}</span></div>
+   </div>
+   <figcaption><span>{{ $h.renderCaption }}</span><span class="mri-hint" hidden>{{ i18n "mriHint" }}</span></figcaption>
+   <div class="mri-controls" hidden><button type="button" id="mri-motion" aria-pressed="true">{{ i18n "depthEffect" }}</button><button type="button" id="mri-reset">{{ i18n "reset" }}</button></div>
   </figure>
  </div>
- <div class="wrap hero-bottom"><span>{{ site.Data.portfolio.identity.englishName }}</span><span>{{ site.Data.portfolio.identity.field }}</span><a href="#about" aria-label="{{ i18n "learnMore" }}">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+ <div class="wrap hero-bottom"><span>{{ site.Data.portfolio.identity.englishName }}</span>{{ range $h.tags }}<span>{{ . }}</span>{{ end }}<a href="#about" aria-label="{{ i18n "learnMore" }}">↓</a></div>
 </section>
+{{ else }}{{ partial "portfolio/hero-classic.html" . }}{{ end }}
