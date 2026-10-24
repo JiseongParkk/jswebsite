@@ -5,6 +5,6 @@
  <g aria-hidden="true"><ellipse cx="240" cy="195" rx="66" ry="85" fill="#74928f"/><ellipse cx="240" cy="195" rx="59" ry="77" fill="#c3d0c3"/><ellipse cx="217" cy="190" rx="19" ry="48" fill="#597574"/><ellipse cx="262" cy="190" rx="19" ry="48" fill="#597574"/><ellipse cx="240" cy="240" rx="11" ry="12" fill="#e4e9d7"/></g>
  <g id="ct-rotor"><path d="M240 52V338" stroke="#9aefd1" stroke-width="3" opacity=".7"/><circle cx="240" cy="52" r="12" fill="#a0f5d9"/><rect x="213" y="326" width="54" height="15" rx="3" fill="#d9af6e"/></g>
  <text x="240" y="20" text-anchor="middle" class="diagram-label">{{ $s.sourceLabel }} / {{ $s.detectorLabel }}</text><text x="240" y="375" text-anchor="middle" class="diagram-label">{{ $s.centerLabel }}</text></svg>
- <div class="scanner-controls" hidden><button class="button primary" id="scan-play" type="button" aria-pressed="false" data-play="{{ i18n "play" }}" data-pause="{{ i18n "pause" }}">{{ i18n "play" }}</button><button class="button" id="scan-reset" type="button">{{ i18n "reset" }}</button><span>{{ $s.angleLabel }} <output id="scan-angle">0°</output></span></div>
+ <div class="scanner-controls" hidden><button class="button primary" id="scan-play" type="button" aria-pressed="false" data-play="{{ i18n "play" }}" data-pause="{{ i18n "pause" }}">{{ i18n "play" }}</button><button class="button" id="scan-reset" type="button">{{ i18n "reset" }}</button><span>{{ $s.angleLabel }} <output id="scan-angle" aria-live="off">0°</output></span></div>
 </div></div></section>
 {{ end }}
