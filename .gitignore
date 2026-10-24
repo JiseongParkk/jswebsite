@@ -8,3 +8,13 @@ public/
 .hugo_build.lock
 exampleSite/packages
 exampleSite/assets/jsconfig.json
+
+# Personal local state and generated submission artifacts
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+exampleSite/.hugo_build.lock
+output/
+tmp/
