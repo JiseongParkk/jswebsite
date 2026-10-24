@@ -1,0 +1,66 @@
+{
+  "eyebrow": "PROJECT / 01 · CT RECONSTRUCTION",
+  "title": "각도가 늘어나면, 영상은 어떻게 달라질까?",
+  "intro": "30·60·90·180개 투영으로 같은 가상 단면을 복원했습니다. 측정 방향 수에 따른 줄무늬와 오차의 변화를 비교하는 개인 학습 실습입니다.",
+  "status": "기본 실험 완료 · 2026.10.24",
+  "reference": "images/projects/ct-angles/reference.png",
+  "summary": "30개에서 180개 투영으로 늘리자 전체 영상 RMSE가 72.18% 감소했습니다. 180개에서도 경계 주변에는 오차가 남았습니다.",
+  "conditions": "256 × 256 Shepp–Logan 팬텀 · 0–180° 균일 표본 · ramp 필터 FBP · 추가 잡음 없음",
+  "note": "실제 환자 영상이 아닌 가상 팬텀 실험입니다. 영상은 모두 같은 밝기 범위(0–1)로 표시합니다.",
+  "chart": "images/projects/ct-angles/quality-metrics.png",
+  "repo": "https://github.com/JiseongParkk/jswebsite/tree/main/projects/ct-angle-comparison",
+  "notebook": "downloads/ct-angle-comparison.ipynb",
+  "archive": "downloads/ct-angle-comparison-results.zip",
+  "cases": [
+    {
+      "count": 30,
+      "rmse": "0.103957",
+      "ssim": "0.463478",
+      "image": "images/projects/ct-angles/reconstruction_30.png"
+    },
+    {
+      "count": 60,
+      "rmse": "0.046081",
+      "ssim": "0.626668",
+      "image": "images/projects/ct-angles/reconstruction_60.png"
+    },
+    {
+      "count": 90,
+      "rmse": "0.034536",
+      "ssim": "0.762179",
+      "image": "images/projects/ct-angles/reconstruction_90.png"
+    },
+    {
+      "count": 180,
+      "rmse": "0.028925",
+      "ssim": "0.921829",
+      "image": "images/projects/ct-angles/reconstruction_180.png"
+    }
+  ],
+  "details": [
+    {
+      "label": "목적",
+      "text": "투영 개수만 바꾸었을 때 CT 복원 품질이 어떻게 달라지는지 시각 자료와 수치로 확인했습니다."
+    },
+    {
+      "label": "역할과 도구",
+      "text": "의료영상 진로에 맞는 개인 실습으로 주제를 선택했습니다. Python·NumPy·scikit-image·Matplotlib를 사용했으며 코드 작성·실행·검증·웹 정리는 AI 보조로 수행했습니다."
+    },
+    {
+      "label": "수행 과정",
+      "text": "가상 팬텀 준비 → 4가지 투영 개수로 Radon 변환 → 동일한 ramp 필터 FBP 복원 → 고정 밝기의 비교 그림과 RMSE·SSIM 계산 → 배열·코드·결과 저장. 정답 영상이 있는 팬텀을 사용해 복원 오차를 직접 계산할 수 있게 했습니다."
+    },
+    {
+      "label": "검증",
+      "text": "4개 복원 배열의 크기와 유한값을 확인하고, 내려받은 배열로 전체 RMSE를 다시 계산해 결과표와 일치함을 검증했습니다."
+    },
+    {
+      "label": "배운 점·한계",
+      "text": "이번 조건에서는 투영 개수가 많아질수록 줄무늬와 오차가 줄었습니다. 잡음 없는 단일 팬텀 실험이므로 실제 환자 영상이나 방사선량 감소 효과로 일반화할 수 없습니다. 전체 SSIM에는 원형 시야 밖의 0 영역도 포함됩니다."
+    },
+    {
+      "label": "다음 개선",
+      "text": "코드와 결과의 의미를 직접 검토하고, 고정된 난수 시드로 투영 잡음을 추가한 뒤 ramp·hann 필터의 차이를 별도 실험으로 비교할 계획입니다."
+    }
+  ]
+}

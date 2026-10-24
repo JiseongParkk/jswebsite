@@ -1,0 +1,12 @@
+{{ if site.Params.medicalPortfolio.ctProject }}
+{{ $p := site.Data.portfolio.project }}
+<section class="section ct-project" id="projects" aria-labelledby="project-title"><div class="wrap">
+<p class="eyebrow">{{ $p.eyebrow }}</p><div class="section-head"><div><h2 class="section-heading" id="project-title">{{ $p.title }}</h2><p class="lede">{{ $p.intro }}</p></div><span class="pill">{{ $p.status }}</span></div>
+<p class="project-conditions">{{ $p.conditions }}</p>
+<div class="project-explorer"><figure class="project-reference"><img src="{{ $p.reference | relURL }}" width="256" height="256" loading="lazy" alt="{{ i18n "ctReferenceAlt" }}"><figcaption>{{ i18n "ctReference" }}</figcaption></figure>
+<div class="project-cases">{{ range $i,$case := $p.cases }}<figure class="project-case" data-count="{{ $case.count }}"><img src="{{ $case.image | relURL }}" width="256" height="256" loading="lazy" alt="{{ i18n "ctReconAlt" }} {{ $case.count }}"><figcaption><strong>{{ $case.count }} {{ i18n "ctProjections" }}</strong><span>RMSE {{ $case.rmse }} · SSIM {{ $case.ssim }}</span></figcaption></figure>{{ end }}</div></div>
+<div class="project-selector" hidden><label for="ct-count">{{ i18n "ctSelect" }}</label><select id="ct-count">{{ range $p.cases }}<option value="{{ .count }}">{{ .count }} {{ i18n "ctProjections" }}</option>{{ end }}</select><span id="ct-result-status" role="status" aria-live="polite"></span></div>
+<p class="project-summary">{{ $p.summary }}</p><p class="media-note">{{ $p.note }}</p>
+<div class="links project-links"><a class="button primary" href="{{ $p.repo }}">{{ i18n "ctCode" }} ↗</a><a class="button" href="{{ $p.notebook | relURL }}" download>{{ i18n "ctNotebook" }} ↓</a><a class="button" href="{{ $p.archive | relURL }}" download>{{ i18n "ctResults" }} ↓</a></div>
+<details class="activity-disclosure project-details"><summary>{{ i18n "ctMethod" }} <span aria-hidden="true">＋</span></summary><img class="project-chart" src="{{ $p.chart | relURL }}" loading="lazy" width="2000" height="740" alt="{{ i18n "ctChartAlt" }}"><dl class="activity-details">{{ range $p.details }}<div><dt>{{ .label }}</dt><dd>{{ .text }}</dd></div>{{ end }}</dl></details>
+</div></section>{{ end }}

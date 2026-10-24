@@ -18,3 +18,13 @@ mriStage: {other: "MRI 콘셉트 비주얼. 방향키로 기울기 조절, Home 
 mriHint: {other: "마우스 또는 방향키로 시점 기울이기"}
 depthEffect: {other: "입체 효과"}
 activityDetails: {other: "제작 과정과 역할 자세히 보기"}
+ctReference: {other: "정답 영상 · 가상 팬텀"}
+ctReferenceAlt: {other: "여러 타원으로 구성된 Shepp–Logan 가상 단면 정답 영상"}
+ctReconAlt: {other: "동일한 팬텀을 ramp 필터 FBP로 복원한 영상, 투영 개수"}
+ctProjections: {other: "개 투영"}
+ctSelect: {other: "투영 개수 바꿔 보기"}
+ctCode: {other: "실험 코드와 설명"}
+ctNotebook: {other: "실행 노트북"}
+ctResults: {other: "결과 파일 ZIP"}
+ctMethod: {other: "정량 그래프 · 실험 과정과 한계"}
+ctChartAlt: {other: "30·60·90·180개 투영 비교. 전체 RMSE는 0.103957에서 0.028925로 감소하고 SSIM은 0.463478에서 0.921829로 증가한다."}
