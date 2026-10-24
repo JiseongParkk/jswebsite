@@ -27,5 +27,7 @@
   });
   reset.addEventListener('click', () => { stop(); angle = 0; render(); });
   document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  motion.addEventListener('change', stop);
   controls.hidden = false;
 })();
