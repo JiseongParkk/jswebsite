@@ -1,0 +1,22 @@
+[
+  {
+    "id": "about",
+    "label": "소개"
+  },
+  {
+    "id": "interests",
+    "label": "관심 분야"
+  },
+  {
+    "id": "imaging",
+    "label": "MRI · CT"
+  },
+  {
+    "id": "activity",
+    "label": "활동 기록"
+  },
+  {
+    "id": "roadmap",
+    "label": "학습 계획"
+  }
+]
