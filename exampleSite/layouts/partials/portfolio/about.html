@@ -1,0 +1,6 @@
+{{ $a := site.Data.portfolio.about }}
+<section class="section about" id="about" aria-labelledby="about-title"><div class="wrap about-grid">
+ <div><p class="eyebrow">{{ $a.eyebrow }}</p><h2 class="section-heading" id="about-title">{{ range split $a.title "
+" }}<span class="line">{{ . }}</span>{{ end }}</h2><div class="prose">{{ range $a.paragraphs }}<p>{{ . }}</p>{{ end }}</div></div>
+ <aside class="profile-note" aria-label="{{ site.Data.portfolio.identity.name }}"><span class="profile-initial" aria-hidden="true">JS</span><p class="profile-name">{{ site.Data.portfolio.identity.name }}</p><p class="profile-english">{{ site.Data.portfolio.identity.englishName }}</p><dl>{{ range $a.facts }}<div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>{{ end }}</dl></aside>
+</div></section>
