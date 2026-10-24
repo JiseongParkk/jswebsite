@@ -1,0 +1,551 @@
+{
+  "excluded_baseline": "a8b1a30fc0e50caa9eb2513e4cc3781cec6e8d88",
+  "included_head": "261a571b2a185538bbbbb3630702f94a8a718c0a",
+  "candidate_count": 56,
+  "excluded_in_range": 0,
+  "actual_change_count": 56,
+  "commits": [
+    {
+      "sha": "9dee9ad79c77122ed98381cfa282a5d91ce25572",
+      "message": "Pin the known working Hugo Extended, Node and Go versions",
+      "paths": [
+        "mise.toml"
+      ]
+    },
+    {
+      "sha": "f7144148cf03234eeecf16e71f4a883f4d063f51",
+      "message": "Exclude local credentials, Python caches and generated reports",
+      "paths": [
+        ".gitignore"
+      ]
+    },
+    {
+      "sha": "170d565cf04061e71347507a067049d8a9277597",
+      "message": "Configure the portfolio for Korean and the public project URL",
+      "paths": [
+        "exampleSite/hugo.yaml"
+      ]
+    },
+    {
+      "sha": "e49d2d914328a973eb301dbc4a7f0924439ca16c",
+      "message": "Remove published demo posts and notes from both content mounts",
+      "paths": [
+        "content/notes/_index.bn.md",
+        "content/notes/_index.md",
+        "content/notes/bash/_index.bn.md",
+        "content/notes/bash/_index.md",
+        "content/notes/bash/basic/index.bn.md",
+        "content/notes/bash/basic/index.md",
+        "content/notes/go/_index.bn.md",
+        "content/notes/go/_index.md",
+        "content/notes/go/advanced/_index.bn.md",
+        "content/notes/go/advanced/_index.md",
+        "content/notes/go/advanced/files/index.bn.md",
+        "content/notes/go/advanced/files/index.md",
+        "content/notes/go/basic/_index.bn.md",
+        "content/notes/go/basic/_index.md",
+        "content/notes/go/basic/flow-control/index.bn.md",
+        "content/notes/go/basic/flow-control/index.md",
+        "content/notes/go/basic/introduction/index.bn.md",
+        "content/notes/go/basic/introduction/index.md",
+        "content/notes/go/basic/types/index.bn.md",
+        "content/notes/go/basic/types/index.md",
+        "content/posts/_index.bn.md",
+        "content/posts/_index.md",
+        "content/posts/category/_index.bn.md",
+        "content/posts/category/_index.md",
+        "content/posts/category/sub-category/_index.bn.md",
+        "content/posts/category/sub-category/_index.md",
+        "content/posts/category/sub-category/rich-content/images/forest.jpg",
+        "content/posts/category/sub-category/rich-content/images/hero.svg",
+        "content/posts/category/sub-category/rich-content/index.bn.md",
+        "content/posts/category/sub-category/rich-content/index.md",
+        "content/posts/introduction/hero.svg",
+        "content/posts/introduction/index.bn.md",
+        "content/posts/introduction/index.md",
+        "content/posts/markdown-sample/hero.svg",
+        "content/posts/markdown-sample/index.bn.md",
+        "content/posts/markdown-sample/index.md",
+        "content/posts/shortcodes/boat.jpg",
+        "content/posts/shortcodes/index.bn.md",
+        "content/posts/shortcodes/index.md",
+        "content/search/_content.gotmpl",
+        "exampleSite/content/notes/_index.bn.md",
+        "exampleSite/content/notes/_index.md",
+        "exampleSite/content/notes/bash/_index.bn.md",
+        "exampleSite/content/notes/bash/_index.md",
+        "exampleSite/content/notes/bash/basic/index.bn.md",
+        "exampleSite/content/notes/bash/basic/index.md",
+        "exampleSite/content/notes/go/_index.bn.md",
+        "exampleSite/content/notes/go/_index.md",
+        "exampleSite/content/notes/go/advanced/_index.bn.md",
+        "exampleSite/content/notes/go/advanced/_index.md",
+        "exampleSite/content/notes/go/advanced/files/index.bn.md",
+        "exampleSite/content/notes/go/advanced/files/index.md",
+        "exampleSite/content/notes/go/basic/_index.bn.md",
+        "exampleSite/content/notes/go/basic/_index.md",
+        "exampleSite/content/notes/go/basic/flow-control/index.bn.md",
+        "exampleSite/content/notes/go/basic/flow-control/index.md",
+        "exampleSite/content/notes/go/basic/introduction/index.bn.md",
+        "exampleSite/content/notes/go/basic/introduction/index.md",
+        "exampleSite/content/notes/go/basic/types/index.bn.md",
+        "exampleSite/content/notes/go/basic/types/index.md",
+        "exampleSite/content/posts/_index.bn.md",
+        "exampleSite/content/posts/_index.md",
+        "exampleSite/content/posts/category/_index.bn.md",
+        "exampleSite/content/posts/category/_index.md",
+        "exampleSite/content/posts/category/sub-category/_index.bn.md",
+        "exampleSite/content/posts/category/sub-category/_index.md",
+        "exampleSite/content/posts/category/sub-category/rich-content/images/forest.jpg",
+        "exampleSite/content/posts/category/sub-category/rich-content/images/hero.svg",
+        "exampleSite/content/posts/category/sub-category/rich-content/index.bn.md",
+        "exampleSite/content/posts/category/sub-category/rich-content/index.md",
+        "exampleSite/content/posts/introduction/hero.svg",
+        "exampleSite/content/posts/introduction/index.bn.md",
+        "exampleSite/content/posts/introduction/index.md",
+        "exampleSite/content/posts/markdown-sample/hero.svg",
+        "exampleSite/content/posts/markdown-sample/index.bn.md",
+        "exampleSite/content/posts/markdown-sample/index.md",
+        "exampleSite/content/posts/shortcodes/boat.jpg",
+        "exampleSite/content/posts/shortcodes/index.bn.md",
+        "exampleSite/content/posts/shortcodes/index.md"
+      ]
+    },
+    {
+      "sha": "9008ca03e45d82904cfa150006828b75be4c2ca6",
+      "message": "Replace John and fictional credentials with Jiseong Park identity",
+      "paths": [
+        "data/bn/author.yaml",
+        "data/bn/sections/about.yaml",
+        "data/bn/sections/accomplishments.yaml",
+        "data/bn/sections/achievements.yaml",
+        "data/bn/sections/education.yaml",
+        "data/bn/sections/experiences.yaml",
+        "data/bn/sections/projects.yaml",
+        "data/bn/sections/recent-posts.yaml",
+        "data/bn/sections/skills.yaml",
+        "data/bn/site.yaml",
+        "data/en/author.yaml",
+        "data/en/sections/about.yaml",
+        "data/en/sections/accomplishments.yaml",
+        "data/en/sections/achievements.yaml",
+        "data/en/sections/education.yaml",
+        "data/en/sections/experiences.yaml",
+        "data/en/sections/featured-posts.yaml",
+        "data/en/sections/projects.yaml",
+        "data/en/sections/publications.yaml",
+        "data/en/sections/recent-posts.yaml",
+        "data/en/sections/skills.yaml",
+        "data/en/site.yaml",
+        "exampleSite/data/bn/author.yaml",
+        "exampleSite/data/bn/sections/about.yaml",
+        "exampleSite/data/bn/sections/accomplishments.yaml",
+        "exampleSite/data/bn/sections/achievements.yaml",
+        "exampleSite/data/bn/sections/education.yaml",
+        "exampleSite/data/bn/sections/experiences.yaml",
+        "exampleSite/data/bn/sections/projects.yaml",
+        "exampleSite/data/bn/sections/recent-posts.yaml",
+        "exampleSite/data/bn/sections/skills.yaml",
+        "exampleSite/data/bn/site.yaml",
+        "exampleSite/data/en/author.yaml",
+        "exampleSite/data/en/sections/about.yaml",
+        "exampleSite/data/en/sections/accomplishments.yaml",
+        "exampleSite/data/en/sections/achievements.yaml",
+        "exampleSite/data/en/sections/education.yaml",
+        "exampleSite/data/en/sections/experiences.yaml",
+        "exampleSite/data/en/sections/featured-posts.yaml",
+        "exampleSite/data/en/sections/projects.yaml",
+        "exampleSite/data/en/sections/publications.yaml",
+        "exampleSite/data/en/sections/recent-posts.yaml",
+        "exampleSite/data/en/sections/skills.yaml",
+        "exampleSite/data/en/site.yaml",
+        "exampleSite/data/ko/author.json",
+        "exampleSite/data/ko/site.json",
+        "exampleSite/data/portfolio/identity.json"
+      ]
+    },
+    {
+      "sha": "843cdd60f8cfff3aad5ce945519ebad675731dc3",
+      "message": "Add Korean labels for navigation and accessible controls",
+      "paths": [
+        "exampleSite/i18n/ko.yaml"
+      ]
+    },
+    {
+      "sha": "a4a33399413393aee8cb650ecd11741f52ae2cb3",
+      "message": "Create an original signal-and-scan identity mark and favicon",
+      "paths": [
+        "exampleSite/static/images/portfolio/mark.svg"
+      ]
+    },
+    {
+      "sha": "df16ec10e297e69d886acdc799576cfdac55e10a",
+      "message": "Define a concise Korean portfolio navigation structure",
+      "paths": [
+        "exampleSite/data/portfolio/navigation.json"
+      ]
+    },
+    {
+      "sha": "a90370451422f6266ae305d2559a0cbc3a3eb4f6",
+      "message": "Establish readable typography and medical imaging design tokens",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/base.css"
+      ]
+    },
+    {
+      "sha": "0d3f351d393000ca2c6d3879ec88eafc3983a20a",
+      "message": "Build a configurable site-level homepage while retaining the Toha fallback",
+      "paths": [
+        "exampleSite/layouts/index.html",
+        "exampleSite/layouts/partials/portfolio/head.html",
+        "exampleSite/layouts/partials/portfolio/toha-home.html"
+      ]
+    },
+    {
+      "sha": "c1ce68ce84c223a6998302d60f7adb06587b0a83",
+      "message": "Add a personal brand header and semantic section navigation",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/header.css",
+        "exampleSite/layouts/partials/portfolio/header.html"
+      ]
+    },
+    {
+      "sha": "1a642c414099798fd043903b16c42394c2e54e15",
+      "message": "Support a keyboard-accessible mobile menu and width changes",
+      "paths": [
+        "exampleSite/assets/scripts/portfolio/menu.js",
+        "exampleSite/assets/styles/portfolio/menu.css"
+      ]
+    },
+    {
+      "sha": "56e017cbdc9f5cb6ef9d1f9ce026e737d7159b11",
+      "message": "Write a biomedical engineering introduction and imaging career focus",
+      "paths": [
+        "exampleSite/data/portfolio/hero.json"
+      ]
+    },
+    {
+      "sha": "fe2cbc2a7780fcd982dcfe366f9b548931c2ce4a",
+      "message": "Create an MRI-led hero with original copy and image attribution",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/hero.css",
+        "exampleSite/layouts/partials/portfolio/hero.html"
+      ]
+    },
+    {
+      "sha": "e533f19f48a92913f229448ee637c2a7039019d5",
+      "message": "Describe the major, career direction and personal learning approach",
+      "paths": [
+        "exampleSite/data/portfolio/about.json"
+      ]
+    },
+    {
+      "sha": "3ff7caef92d122b7c6336181b355562d0d2cbf78",
+      "message": "Add an accessible personal profile section without fictional credentials",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/about.css",
+        "exampleSite/layouts/partials/portfolio/about.html"
+      ]
+    },
+    {
+      "sha": "8bbba11c60d3bafadf80ced7104b30515e7fcf66",
+      "message": "Explain three medical imaging interests with concrete reasons and next steps",
+      "paths": [
+        "exampleSite/data/portfolio/interests.json"
+      ]
+    },
+    {
+      "sha": "4050d84c9a149fb0dcf0c67e471761c8b1946126",
+      "message": "Present acquisition, reconstruction and validation as distinct interests",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/interests.css",
+        "exampleSite/layouts/partials/portfolio/interests.html"
+      ]
+    },
+    {
+      "sha": "2f112ce068ea828b2b9850dfe615ed7df844159e",
+      "message": "Connect current tool experience to actual portfolio work",
+      "paths": [
+        "exampleSite/data/portfolio/skills.json"
+      ]
+    },
+    {
+      "sha": "d9efe4654e494b27753f7f8ac05a109120e8d4f2",
+      "message": "Display skill usage examples without unsupported proficiency scores",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/skills.css",
+        "exampleSite/layouts/partials/portfolio/skills.html"
+      ]
+    },
+    {
+      "sha": "a4f1854958cec25dc16ba00fbe40f4c71ed3d870",
+      "message": "Add an attributed CC BY-SA sagittal MRI educational image",
+      "paths": [
+        "docs/media/mri.md",
+        "exampleSite/static/images/portfolio/mri-brain.jpg"
+      ]
+    },
+    {
+      "sha": "e66b3b389fffe638a3adb274d39a3559b8953b87",
+      "message": "Add a CC0 axial CT image and preserve the original attribution",
+      "paths": [
+        "docs/media/ct.md",
+        "exampleSite/static/images/portfolio/ct-brain.png"
+      ]
+    },
+    {
+      "sha": "002ac0aa53a1c946a358961975fd51f0aa4e55b3",
+      "message": "Write MRI and CT educational captions and distinguish external examples",
+      "paths": [
+        "exampleSite/data/portfolio/gallery.json"
+      ]
+    },
+    {
+      "sha": "d71ee83b61fb427f532a718bcea45578afe18925",
+      "message": "Add proportionate MRI and CT image galleries with alternative descriptions",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/gallery.css",
+        "exampleSite/layouts/partials/portfolio/gallery.html"
+      ]
+    },
+    {
+      "sha": "3e5e3b31eb4eb3961f28c36ff49ffd5299424ade",
+      "message": "Implement keyboard-operable CT display brightness and reset controls",
+      "paths": [
+        "exampleSite/assets/scripts/portfolio/viewer.js"
+      ]
+    },
+    {
+      "sha": "28d6bc589ef7076a79daf70085e5fc2754ac2b5c",
+      "message": "Explain the scope and limits of an original CT acquisition animation",
+      "paths": [
+        "exampleSite/data/portfolio/scanner.json"
+      ]
+    },
+    {
+      "sha": "6f534589d27dd06be50a96ee1425d2b261f03258",
+      "message": "Draw a semantic CT acquisition schematic as an optional site feature",
+      "paths": [
+        "exampleSite/layouts/partials/portfolio/scanner.html"
+      ]
+    },
+    {
+      "sha": "efd9c2fdfcfd92792546936eb2151e206a6d641e",
+      "message": "Style the CT concept animation with clear labels and playback controls",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/scanner.css"
+      ]
+    },
+    {
+      "sha": "fa6bd49f09d065b2036c5fc86abbbd6118f71603",
+      "message": "Animate the CT source and detector with play, pause and reset",
+      "paths": [
+        "exampleSite/assets/scripts/portfolio/scanner.js"
+      ]
+    },
+    {
+      "sha": "7e202e3b0bb1f76d5e725c467cdd7c66f2d56df4",
+      "message": "Record the real portfolio-building activity with role, process and limitations",
+      "paths": [
+        "exampleSite/data/portfolio/activity.json"
+      ]
+    },
+    {
+      "sha": "3474239ce84d1a66ec4363eb6683cc7794108e33",
+      "message": "Publish an evidence-linked activity record ready for future project additions",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/activity.css",
+        "exampleSite/layouts/partials/portfolio/activity.html"
+      ]
+    },
+    {
+      "sha": "d252a5e6f706286b1b9345ae2ad65231a6ba1929",
+      "message": "Define actionable medical imaging learning goals and expected outputs",
+      "paths": [
+        "exampleSite/data/portfolio/roadmap.json"
+      ]
+    },
+    {
+      "sha": "590fb0dbc0824d8ede5439a98025f513fea234d6",
+      "message": "Present learning plans as future actions rather than completed projects",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/roadmap.css",
+        "exampleSite/layouts/partials/portfolio/roadmap.html"
+      ]
+    },
+    {
+      "sha": "f1dcf7d29ed4b98c52d33a894ba121223704cdc5",
+      "message": "Record theme, image licenses and primary medical imaging references",
+      "paths": [
+        "exampleSite/data/portfolio/sources.json"
+      ]
+    },
+    {
+      "sha": "8b1bf824945b86483e67b6d85f290c5bc84f0bf6",
+      "message": "Expose source attribution and license links on the public page",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/sources.css",
+        "exampleSite/layouts/partials/portfolio/sources.html"
+      ]
+    },
+    {
+      "sha": "9f273d9c04f33579bab07ab469e66d35d59a49fb",
+      "message": "Add personal footer navigation and retain the Toha MIT credit",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/footer.css",
+        "exampleSite/data/portfolio/footer.json",
+        "exampleSite/layouts/partials/portfolio/footer.html"
+      ]
+    },
+    {
+      "sha": "368c9ccad0fb92660ac81af83a64a55b67cb661f",
+      "message": "Adapt all portfolio sections for mobile, tablet and desktop widths",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/zz-responsive.css"
+      ]
+    },
+    {
+      "sha": "81668319a74b614190b344353d75b3b08c2c2565",
+      "message": "Add a skip link, visible keyboard focus and anchor clearance",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/zz-accessibility.css"
+      ]
+    },
+    {
+      "sha": "2a6760f1b7dfcf9968d1a0eacb2f1a1aaa8efc65",
+      "message": "Respect reduced motion and keep the CT animation opt-in",
+      "paths": [
+        "exampleSite/assets/scripts/portfolio/scanner.js",
+        "exampleSite/assets/styles/portfolio/zz-motion.css"
+      ]
+    },
+    {
+      "sha": "802f5831e89b5795a87a2bd71079d7a6c7fc5f6a",
+      "message": "Provide a Korean not-found page with a project-path-safe home link",
+      "paths": [
+        "exampleSite/layouts/404.html"
+      ]
+    },
+    {
+      "sha": "b55f05ea4a459cee68e3785899bc16b2164158b1",
+      "message": "Set personal Korean search and sharing metadata",
+      "paths": [
+        "exampleSite/layouts/partials/portfolio/head.html"
+      ]
+    },
+    {
+      "sha": "577068d7be376e861a9c4cf0daf400c7f40d9ad2",
+      "message": "Make portfolio content readable when printed or saved as PDF",
+      "paths": [
+        "exampleSite/assets/styles/portfolio/zzz-print.css"
+      ]
+    },
+    {
+      "sha": "8a49b1ff573608e3ac473e2b5137155095f705ec",
+      "message": "Indicate the visible section in the navigation without rewriting history",
+      "paths": [
+        "exampleSite/assets/scripts/portfolio/navigation.js"
+      ]
+    },
+    {
+      "sha": "59f9f4b7d0eb543188972c727547dec6cbc9bc0b",
+      "message": "Attach the built commit and Actions URL to every Pages artifact",
+      "paths": [
+        ".github/workflows/deploy-pages.yml",
+        "scripts/write-build-info.py"
+      ]
+    },
+    {
+      "sha": "bfd9e5806384ae319020c95d5db96d75068dc315",
+      "message": "Link the public footer to the version actually deployed",
+      "paths": [
+        "exampleSite/data/portfolio/footer.json",
+        "exampleSite/layouts/partials/portfolio/footer.html"
+      ]
+    },
+    {
+      "sha": "2ae5d8bcd7b243ad9f3a23a7c67f3a7afc4f352b",
+      "message": "Document image reuse conditions and the scope of AI-assisted site work",
+      "paths": [
+        "docs/SOURCES.md"
+      ]
+    },
+    {
+      "sha": "47a970820e17a27d9947f01b3a570a56cc66d862",
+      "message": "Replace the demo README with reproducible portfolio editing and deployment instructions",
+      "paths": [
+        "README.md"
+      ]
+    },
+    {
+      "sha": "b7be9c0f76db2774a2fc2012cbf4bc397b27a344",
+      "message": "Record actual AI requests, adopted changes and deferred project scope",
+      "paths": [
+        "docs/AI-USAGE.md"
+      ]
+    },
+    {
+      "sha": "5318f0d0de7d84b26fb9bcddb7e60a8ed740617f",
+      "message": "Map the implemented site to coursework evidence and remaining submission steps",
+      "paths": [
+        "docs/SUBMISSION-CHECKLIST.md"
+      ]
+    },
+    {
+      "sha": "52b866be363e3e9d4ca083aa164efb6a867a8497",
+      "message": "Add a reproducible commit-range audit with exact SHAs and changed paths",
+      "paths": [
+        "scripts/audit-commits.py"
+      ]
+    },
+    {
+      "sha": "c249f18355eb1923057e235e403ef2c8cd5d7bda",
+      "message": "Fix the Hugo about-title parse error with explicit title lines",
+      "paths": [
+        "exampleSite/data/portfolio/about.json",
+        "exampleSite/layouts/partials/portfolio/about.html"
+      ]
+    },
+    {
+      "sha": "d82e50b161bc0b664a020ad830bca7a8df04ddda",
+      "message": "Fix newline serialization in the deployment version recorder",
+      "paths": [
+        "scripts/write-build-info.py"
+      ]
+    },
+    {
+      "sha": "b8a256e478ce5ac553da45d9c1d1abb8f5b8f033",
+      "message": "Use supported Hugo locale and language label configuration",
+      "paths": [
+        "exampleSite/hugo.yaml"
+      ]
+    },
+    {
+      "sha": "b351cb5e03e76c048a44195d474d17c36e6833d6",
+      "message": "Scope inherited theme release drafting to the upstream repository",
+      "paths": [
+        ".github/workflows/merge-to-main.yml"
+      ]
+    },
+    {
+      "sha": "cc23f8bbfc9b8dc98aeffb45e97761438ca41df4",
+      "message": "Avoid announcing the animation angle on every frame to screen readers",
+      "paths": [
+        "exampleSite/layouts/partials/portfolio/scanner.html"
+      ]
+    },
+    {
+      "sha": "261a571b2a185538bbbbb3630702f94a8a718c0a",
+      "message": "Save real deployment, responsive screenshots and interaction verification evidence",
+      "paths": [
+        "docs/AI-USAGE.md",
+        "docs/VALIDATION-2026-10-24.md",
+        "docs/evidence/ct-animation-1440.png",
+        "docs/evidence/desktop-1440.png",
+        "docs/evidence/live-assets.json",
+        "docs/evidence/mobile-390.png",
+        "docs/evidence/tablet-768-activity.png"
+      ]
+    }
+  ]
+}
