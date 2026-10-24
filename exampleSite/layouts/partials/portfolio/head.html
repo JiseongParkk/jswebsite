@@ -9,3 +9,11 @@
   {{ $style := . | resources.Concat "styles/medical-portfolio.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 {{ end }}
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ site.Title }}">
+<meta property="og:description" content="{{ site.Params.description }}">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="{{ site.Home.Permalink }}">
+<meta property="og:image" content="{{ "images/portfolio/mark.svg" | absURL }}">
+<meta name="theme-color" content="#082b38">
