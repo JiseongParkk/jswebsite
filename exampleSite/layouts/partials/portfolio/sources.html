@@ -1,0 +1,2 @@
+{{ $s := site.Data.portfolio.sources }}
+<section class="section sources" id="sources" aria-labelledby="sources-title"><div class="wrap"><p class="eyebrow">{{ $s.eyebrow }}</p><h2 class="section-heading" id="sources-title">{{ $s.title }}</h2><p class="lede">{{ $s.intro }}</p><ul class="source-list">{{ range $s.items }}<li><a href="{{ .url }}">{{ .title }} <span aria-hidden="true">↗</span></a><p>{{ .description }}</p></li>{{ end }}</ul></div></section>
