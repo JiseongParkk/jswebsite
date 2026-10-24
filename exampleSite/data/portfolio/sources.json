@@ -1,0 +1,42 @@
+{
+  "eyebrow": "CREDITS & REFERENCES",
+  "title": "출처를 남기고, 기록을 이어갑니다.",
+  "intro": "공개 이미지와 원본 테마의 출처를 표시합니다. 학습용 개념도와 사이트의 구성·설명은 AI 보조를 활용해 제작했습니다.",
+  "items": [
+    {
+      "title": "Toha · Hugo Theme",
+      "description": "원본 테마 · MIT License. 테마 소스를 유지하고 개인 포트폴리오용 데이터와 화면을 구성했습니다.",
+      "url": "https://github.com/hugo-toha/toha"
+    },
+    {
+      "title": "MRI brain sagittal section",
+      "description": "everyone’s idle · CC BY-SA 2.0. Commons의 원본 이미지를 변경 없이 사용했습니다.",
+      "url": "https://commons.wikimedia.org/wiki/File:MRI_brain_sagittal_section.jpg"
+    },
+    {
+      "title": "CT of a normal brain, axial 14",
+      "description": "Mikael Häggström, M.D. · CC0 1.0. 원본 PNG를 사용하며 밝기 조절은 표시 기능입니다.",
+      "url": "https://commons.wikimedia.org/wiki/File:CT_of_a_normal_brain,_axial_14.png"
+    },
+    {
+      "title": "MRI 이미지 이용 조건",
+      "description": "CC BY-SA 2.0 · 저작자 표시와 동일조건변경허락.",
+      "url": "https://creativecommons.org/licenses/by-sa/2.0/"
+    },
+    {
+      "title": "CT 이미지 이용 조건",
+      "description": "CC0 1.0 · 퍼블릭 도메인 기증.",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "title": "NIBIB · MRI",
+      "description": "MRI 영상 형성 원리를 공부할 때 참고하는 공식 교육 자료.",
+      "url": "https://www.nibib.nih.gov/science-education/science-topics/magnetic-resonance-imaging-mri"
+    },
+    {
+      "title": "NIBIB · Computed Tomography",
+      "description": "CT의 영상 획득 원리를 공부할 때 참고하는 공식 교육 자료.",
+      "url": "https://www.nibib.nih.gov/science-education/science-topics/computed-tomography-ct"
+    }
+  ]
+}
