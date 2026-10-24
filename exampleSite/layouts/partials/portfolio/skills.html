@@ -1,0 +1,2 @@
+{{ $s := site.Data.portfolio.skills }}
+<section class="section skills" id="skills" aria-labelledby="skills-title"><div class="wrap"><p class="eyebrow">{{ $s.eyebrow }}</p><h2 class="section-heading" id="skills-title">{{ $s.title }}</h2><p class="lede">{{ $s.intro }}</p><div class="skill-list">{{ range $s.items }}<article><div><h3>{{ .name }}</h3><span class="pill">{{ .level }}</span></div><p>{{ .body }}</p></article>{{ end }}</div></div></section>
