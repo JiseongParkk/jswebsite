@@ -1,0 +1,59 @@
+{
+  "url": "https://jiseongparkk.github.io/jswebsite/",
+  "status": 200,
+  "build": {
+    "commit": "b8a256e478ce5ac553da45d9c1d1abb8f5b8f033",
+    "branch": "main",
+    "repository": "JiseongParkk/jswebsite",
+    "workflow": "https://github.com/JiseongParkk/jswebsite/actions/runs/40086230205",
+    "hugo": "0.167.0 extended"
+  },
+  "assets": [
+    {
+      "url": "https://jiseongparkk.github.io/jswebsite/images/portfolio/ct-brain.png",
+      "status": 200,
+      "bytes": 149095
+    },
+    {
+      "url": "https://jiseongparkk.github.io/jswebsite/images/portfolio/mark.svg",
+      "status": 200,
+      "bytes": 307
+    },
+    {
+      "url": "https://jiseongparkk.github.io/jswebsite/images/portfolio/mri-brain.jpg",
+      "status": 200,
+      "bytes": 101928
+    },
+    {
+      "url": "https://jiseongparkk.github.io/jswebsite/scripts/portfolio/menu.min.407bf9754cc7db90004bd0817a9b056c547a2ea8c2d566900935005ff3a8c7c7.js",
+      "status": 200,
+      "bytes": 609
+    },
+    {
+      "url": "https://jiseongparkk.github.io/jswebsite/scripts/portfolio/navigation.min.4dc448eb4eed638352248c6e0f1db15b8c1b88a57abdd056f7d7853fcfbd6a7b.js",
+      "status": 200,
+      "bytes": 562
+    },
+    {
+      "url": "https://jiseongparkk.github.io/jswebsite/scripts/portfolio/scanner.min.35e05cdb06f3ba71c0410a4895ff0ec3eef6f46af4fb1b554d10609c106f1d9a.js",
+      "status": 200,
+      "bytes": 965
+    },
+    {
+      "url": "https://jiseongparkk.github.io/jswebsite/scripts/portfolio/viewer.min.364cbde28376d1d20cadb1a0908178f61390ca2a9be8e72d16a90961b4b1b188.js",
+      "status": 200,
+      "bytes": 439
+    },
+    {
+      "url": "https://jiseongparkk.github.io/jswebsite/styles/medical-portfolio.min.02fb45774762afc1f98432aeac3a73418118111f5652c11ced0912b0729273a3.css",
+      "status": 200,
+      "bytes": 16818
+    }
+  ],
+  "missing_anchors": [],
+  "duplicate_ids": [],
+  "contains_sample_John": false,
+  "contains_deferred_project": false,
+  "404_has_home_link": true,
+  "lang_ko": true
+}
