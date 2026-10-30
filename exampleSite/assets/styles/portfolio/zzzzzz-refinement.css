@@ -32,3 +32,6 @@
 .profile-note dt{flex:0 0 auto}
 .profile-note dd{min-width:0;overflow-wrap:anywhere}
 @media(max-width:600px){.immersive .profile-note{padding:24px}.profile-note dl div{gap:16px}}
+/* Keep equal inner gutters on every interest card, including edge cards. */
+.immersive .interest-card,.immersive .interest-card:first-child,.immersive .interest-card:last-child{padding:28px 32px;min-width:0}
+@media(max-width:900px){.immersive .interest-card,.immersive .interest-card:first-child,.immersive .interest-card:last-child{padding:24px}}
