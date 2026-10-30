@@ -25,3 +25,10 @@
 @media(max-width:760px){.project-layout{grid-template-columns:1fr;gap:32px}.project-editorial .section-heading{max-width:600px}.project-links .button{width:auto}.project-lab{padding:20px}.project-selector{grid-template-columns:1fr auto}.projection-options{gap:7px}.project-reference{max-width:none}.immersive .hero-grid{gap:25px}.immersive .hero h1{font-size:2.7rem}}
 @media(max-width:600px){.immersive .hero-grid{grid-template-columns:1fr;padding-block:38px;gap:30px;min-height:0}.immersive .hero h1{font-size:3.2rem}.immersive .hero-intro{font-size:.89rem}.immersive .hero-description{font-size:.88rem}.documentary-mri{max-width:290px}.immersive .section{padding-block:56px}.project-selector{grid-template-columns:1fr}.projection-options button{flex:1}.project-lab{padding:16px}.project-explorer figcaption{font-size:.66rem}.project-editorial .project-summary{font-size:.91rem}.project-links{gap:10px}.project-links .button{width:100%}.immersive .hero-bottom{font-size:.5rem}.project-download{font-size:.75rem}}
 @media(prefers-reduced-motion:reduce){.projection-options button{transition:none}}
+/* Balanced inner gutters for the profile card, including narrow screens. */
+.immersive .profile-note{padding:28px 35px;min-width:0}
+.profile-note .profile-name{margin-top:0}
+.profile-note dl div{align-items:baseline}
+.profile-note dt{flex:0 0 auto}
+.profile-note dd{min-width:0;overflow-wrap:anywhere}
+@media(max-width:600px){.immersive .profile-note{padding:24px}.profile-note dl div{gap:16px}}
