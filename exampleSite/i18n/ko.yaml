@@ -28,3 +28,5 @@ ctNotebook: {other: "실행 노트북"}
 ctResults: {other: "결과 파일 ZIP"}
 ctMethod: {other: "정량 그래프 · 실험 과정과 한계"}
 ctChartAlt: {other: "30·60·90·180개 투영 비교. 전체 RMSE는 0.103957에서 0.028925로 감소하고 SSIM은 0.463478에서 0.921829로 증가한다."}
+
+viewProject: {other: "CT 실습 보기"}

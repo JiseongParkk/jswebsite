@@ -7,8 +7,14 @@
    <h1 id="hero-title">{{ $h.title }}<br><span>{{ $h.accent }}</span></h1>
    <p class="hero-intro">{{ $h.intro }}</p>
    <p class="hero-description">{{ $h.body }}</p>
-   <div class="links"><a class="button primary" href="#imaging">{{ i18n "exploreImaging" }} <span aria-hidden="true">↘</span></a><a class="button hero-secondary" href="#activity">{{ i18n "viewActivity" }} <span aria-hidden="true">↗</span></a></div>
+   <div class="links"><a class="button primary" href="#imaging">{{ i18n "exploreImaging" }} <span aria-hidden="true">↘</span></a><a class="button hero-secondary" href="#projects">{{ i18n "viewProject" }} <span aria-hidden="true">↗</span></a></div>
   </div>
+  {{ if site.Params.medicalPortfolio.documentaryHero }}
+  <figure class="documentary-mri">
+   <img src="{{ $h.image | relURL }}" alt="{{ $h.alt }}" width="512" height="512" fetchpriority="high">
+   <figcaption><span>{{ $h.caption }}</span><a href="{{ $h.source }}">{{ i18n "source" }}</a></figcaption>
+  </figure>
+  {{ else }}
   <figure class="mri-experience">
    <div class="mri-stage" id="mri-stage" aria-label="{{ i18n "mriStage" }}">
     <div class="mri-orbit orbit-one" aria-hidden="true"></div><div class="mri-orbit orbit-two" aria-hidden="true"></div>
@@ -16,7 +22,7 @@
    </div>
    <figcaption><span>{{ $h.renderCaption }}</span><span class="mri-hint" hidden>{{ i18n "mriHint" }}</span></figcaption>
    <div class="mri-controls" hidden><button type="button" id="mri-motion" aria-pressed="true">{{ i18n "depthEffect" }}</button><button type="button" id="mri-reset">{{ i18n "reset" }}</button></div>
-  </figure>
+  </figure>{{ end }}
  </div>
  <div class="wrap hero-bottom"><span>{{ site.Data.portfolio.identity.englishName }}</span>{{ range $h.tags }}<span>{{ . }}</span>{{ end }}<a href="#about" aria-label="{{ i18n "learnMore" }}">↓</a></div>
 </section>

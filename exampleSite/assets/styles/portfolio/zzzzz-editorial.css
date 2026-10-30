@@ -1,0 +1,13 @@
+/* Documentary hero: retain the existing page backgrounds. */
+.documentary-mri{max-width:420px;width:100%;margin:0 auto;padding:28px 0}
+.documentary-mri img{display:block;width:100%;height:auto;max-height:430px;object-fit:contain;border-radius:3px}
+.documentary-mri figcaption{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;margin-top:14px;color:#bed3da;font-size:.7rem;line-height:1.7}
+.documentary-mri a{color:inherit;text-underline-offset:4px}
+.immersive .hero-grid{gap:50px;min-height:600px}
+.immersive .hero-kicker{font-family:inherit;letter-spacing:.04em}
+.immersive .hero h1{font-size:clamp(2.7rem,4.2vw,4rem);font-weight:700;letter-spacing:-.045em}
+.immersive .hero-description{font-size:1rem;max-width:440px}
+.immersive .hero-bottom{font-family:inherit;letter-spacing:.03em}
+.project-case[hidden],.project-selector[hidden]{display:none!important}
+@media(max-width:900px){.immersive .hero-grid{gap:25px}.documentary-mri{max-width:330px}}
+@media(max-width:600px){.immersive .hero-grid{gap:12px;min-height:0}.documentary-mri{max-width:300px;padding-top:12px}.immersive .hero-description{font-size:.92rem}.documentary-mri figcaption{font-size:.65rem}}

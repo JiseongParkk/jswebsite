@@ -1,22 +1,22 @@
 {
-  "eyebrow": "TOOLS & PRACTICE",
-  "title": "도구를 배우며, 직접 적용합니다.",
-  "intro": "현재 포트폴리오 제작에 실제로 사용한 도구를 기준으로 기록했습니다. 의료영상 도구의 학습 경험은 추후 결과와 함께 추가할 예정입니다.",
+  "eyebrow": "사용한 도구",
+  "title": "실습과 웹사이트에 사용한 도구",
+  "intro": "CT 재구성 실습과 포트폴리오 제작에서 아래 도구를 AI의 도움을 받아 사용했습니다.",
   "items": [
     {
-      "name": "Hugo · Toha",
-      "level": "활용 중",
-      "body": "기존 테마와 Hugo 템플릿을 바탕으로 한글 소개, 관심 분야와 활동 섹션을 구성합니다."
+      "name": "Python · scikit-image",
+      "level": "학습 중",
+      "body": "Colab에서 가상 팬텀의 Radon 변환과 FBP 복원을 실행하고, NumPy로 오차를 계산했습니다."
     },
     {
-      "name": "Git · GitHub",
-      "level": "활용 중",
-      "body": "콘텐츠·설정 변경을 커밋으로 남기고 원격 main에 반영하며 수정 과정을 기록합니다."
+      "name": "Matplotlib · Colab",
+      "level": "학습 중",
+      "body": "같은 밝기 범위로 복원 결과를 비교하고 RMSE·SSIM 그래프와 실행 노트북을 저장했습니다."
     },
     {
-      "name": "GitHub Actions · Pages",
+      "name": "Hugo · GitHub Actions",
       "level": "활용 중",
-      "body": "main에 push한 변경이 정적 사이트 빌드와 HTTPS 공개 배포로 이어지도록 구성합니다."
+      "body": "Toha 기반 사이트를 수정하고 Git 커밋·push를 통해 GitHub Pages에 배포했습니다."
     }
   ]
 }

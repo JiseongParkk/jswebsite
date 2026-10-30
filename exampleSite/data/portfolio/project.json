@@ -1,6 +1,6 @@
 {
-  "eyebrow": "PROJECT / 01 · CT RECONSTRUCTION",
-  "title": "각도가 늘어나면, 영상은 어떻게 달라질까?",
+  "eyebrow": "개인 실습 · 2026년 10월",
+  "title": "CT 투영 개수에 따른 복원 품질 비교",
   "intro": "30·60·90·180개 투영으로 같은 가상 단면을 복원했습니다. 측정 방향 수에 따른 줄무늬와 오차의 변화를 비교하는 개인 학습 실습입니다.",
   "status": "기본 실험 완료 · 2026.10.24",
   "reference": "images/projects/ct-angles/reference.png",
