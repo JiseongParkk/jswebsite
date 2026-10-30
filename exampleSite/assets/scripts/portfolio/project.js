@@ -1,1 +1,18 @@
-(() => {const root=document.querySelector('.ct-project');if(!root)return;const select=root.querySelector('#ct-count'),cases=[...root.querySelectorAll('.project-case')],status=root.querySelector('#ct-result-status');if(!select||!cases.length)return;const update=()=>{for(const item of cases)item.hidden=item.dataset.count!==select.value;const current=cases.find(item=>item.dataset.count===select.value);status.textContent=current.querySelector('figcaption span').textContent;};root.querySelector('.project-explorer').classList.add('is-interactive');root.querySelector('.project-selector').hidden=false;select.addEventListener('change',update);update();})();
+(() => {
+  const root = document.querySelector('.ct-project');
+  if (!root) return;
+  const cases = [...root.querySelectorAll('.project-case')];
+  const buttons = [...root.querySelectorAll('[data-projection]')];
+  const status = root.querySelector('#ct-result-status');
+  if (!cases.length || !buttons.length || !status) return;
+  function select(count) {
+    cases.forEach(item => { item.hidden = item.dataset.count !== count; });
+    buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.projection === count)));
+    const current = cases.find(item => item.dataset.count === count);
+    status.textContent = current.querySelector('figcaption span').textContent;
+  }
+  root.querySelector('.project-explorer').classList.add('is-interactive');
+  root.querySelector('.project-selector').hidden = false;
+  buttons.forEach(button => button.addEventListener('click', () => select(button.dataset.projection)));
+  select('30');
+})();

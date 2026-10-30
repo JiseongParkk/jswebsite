@@ -1,0 +1,27 @@
+/* Refinement preserves all existing section backgrounds and image pixels. */
+.immersive{--content:1200px}
+.immersive .hero-grid{grid-template-columns:1.1fr 1fr;gap:80px;min-height:640px;padding-block:65px}
+.immersive .hero h1{font-size:clamp(3rem,5.3vw,5rem);line-height:1.18;letter-spacing:-.065em}
+.immersive .hero-intro{font-weight:500;font-size:1.02rem;margin-top:30px}
+.immersive .hero-description{color:#c0d2d8;line-height:1.9;font-size:.95rem;max-width:410px}
+.documentary-mri{max-width:410px;padding:0}.image-index{display:flex;justify-content:space-between;font-size:.65rem;letter-spacing:.1em;color:#b9d2d8;border-bottom:1px solid #ffffff30;padding-bottom:12px;margin-bottom:18px}
+.documentary-mri img{max-height:435px;object-fit:contain}.documentary-mri figcaption{font-size:.63rem;line-height:1.7}
+.immersive .hero-bottom{padding-block:18px;font-size:.64rem;color:#bed3d7}
+.immersive .section{padding-block:82px}.immersive .section-heading{font-size:clamp(1.8rem,2.6vw,2.65rem);line-height:1.4;letter-spacing:-.045em}
+.eyebrow{letter-spacing:.1em;font-weight:600}.lede{line-height:1.9}
+.project-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;align-items:start}
+.project-editorial .section-heading{max-width:410px}.project-editorial .lede{font-size:.92rem}.project-status{margin-top:22px;font-size:.67rem}
+.project-editorial .project-summary{border-left:2px solid var(--teal);padding-left:18px;font-size:1rem;line-height:1.9;font-weight:500;margin:30px 0 20px}
+.project-conditions{line-height:1.9;font-size:.7rem;margin:0}.project-links{gap:16px;align-items:center}.project-links .button{width:100%;justify-content:space-between}
+.project-download{font-size:.77rem;min-height:44px;display:inline-flex;align-items:center;text-decoration-thickness:1px}
+.project-lab{border:1px solid var(--line);padding:25px;border-radius:6px;min-width:0}.lab-heading{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:17px;margin-bottom:24px;font-size:.7rem;color:var(--muted)}
+.project-explorer.is-interactive{gap:16px}.project-explorer img{border-radius:2px}.project-explorer figcaption{font-size:.72rem}.project-case figcaption span{display:none}.project-explorer:not(.is-interactive) .project-case figcaption span{display:block}
+.project-selector{display:grid;grid-template-columns:1fr auto;gap:12px;font-size:.75rem;margin:24px 0 16px}.projection-options{display:flex;gap:4px}.projection-options button{background:transparent;border:1px solid var(--line);border-radius:3px;min-width:44px;min-height:44px;font-size:.8rem;transition:background .15s,color .15s}
+.projection-options button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:white;font-weight:700;text-decoration:underline;text-underline-offset:5px}
+#ct-result-status{grid-column:1/-1;font-size:.75rem;font-variant-numeric:tabular-nums;padding-top:14px;border-top:1px solid var(--line)}
+.project-lab .media-note{font-size:.67rem;line-height:1.8}.project-details{margin-top:40px}
+.immersive .profile-note{border-left:1px solid var(--line);padding-left:35px}.profile-initial{display:none}.skill-list article{box-shadow:none}.immersive .interest-card h3{font-size:1.1rem}
+@media(max-width:1000px){.immersive .hero-grid{gap:35px}.project-layout{gap:30px;grid-template-columns:1fr 1.15fr}.project-lab{padding:18px}.project-selector{grid-template-columns:1fr}.projection-options{justify-content:space-between}.projection-options button{flex:1}}
+@media(max-width:760px){.project-layout{grid-template-columns:1fr;gap:32px}.project-editorial .section-heading{max-width:600px}.project-links .button{width:auto}.project-lab{padding:20px}.project-selector{grid-template-columns:1fr auto}.projection-options{gap:7px}.project-reference{max-width:none}.immersive .hero-grid{gap:25px}.immersive .hero h1{font-size:2.7rem}}
+@media(max-width:600px){.immersive .hero-grid{grid-template-columns:1fr;padding-block:38px;gap:30px;min-height:0}.immersive .hero h1{font-size:3.2rem}.immersive .hero-intro{font-size:.89rem}.immersive .hero-description{font-size:.88rem}.documentary-mri{max-width:290px}.immersive .section{padding-block:56px}.project-selector{grid-template-columns:1fr}.projection-options button{flex:1}.project-lab{padding:16px}.project-explorer figcaption{font-size:.66rem}.project-editorial .project-summary{font-size:.91rem}.project-links{gap:10px}.project-links .button{width:100%}.immersive .hero-bottom{font-size:.5rem}.project-download{font-size:.75rem}}
+@media(prefers-reduced-motion:reduce){.projection-options button{transition:none}}

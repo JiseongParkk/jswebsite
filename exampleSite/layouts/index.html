@@ -8,7 +8,7 @@
   <a class="skip-link" href="#main">{{ i18n "skip" }}</a>
   {{ partial "portfolio/header.html" . }}
   <main id="main" tabindex="-1">
-    {{ range $name := slice "hero" "about" "interests" "gallery" "scanner" "project" "activity" "skills" "roadmap" "sources" }}
+    {{ range $name := slice "hero" "about" "project" "interests" "gallery" "scanner" "activity" "skills" "roadmap" "sources" }}
       {{ partial (printf "portfolio/%s.html" $name) $ }}
     {{ end }}
   </main>
