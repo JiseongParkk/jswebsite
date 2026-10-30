@@ -13,7 +13,7 @@
   <figure class="documentary-mri">
    <div class="image-index"><span>{{ i18n "mriPlate" }}</span><span>{{ i18n "mriPlane" }}</span></div>
    <img src="{{ $h.image | relURL }}" alt="{{ $h.alt }}" width="512" height="512" fetchpriority="high">
-   <figcaption><span>{{ $h.caption }}</span><a href="{{ $h.source }}">{{ i18n "source" }}</a></figcaption><button class="cinematic-control" type="button" aria-pressed="false" hidden>{{ i18n "plateMotion" }}</button>
+   <figcaption><span>{{ $h.caption }}</span><a href="{{ $h.source }}">{{ i18n "source" }}</a></figcaption>
   </figure>
   {{ else }}
   <figure class="mri-experience">
@@ -28,4 +28,3 @@
  <div class="wrap hero-bottom"><span>{{ site.Data.portfolio.identity.englishName }}</span>{{ range $h.tags }}<span>{{ . }}</span>{{ end }}<a href="#about" aria-label="{{ i18n "learnMore" }}">↓</a></div>
 </section>
 {{ else }}{{ partial "portfolio/hero-classic.html" . }}{{ end }}
-

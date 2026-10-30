@@ -35,4 +35,3 @@ mriPlate: {other: "MRI / 01"}
 mriPlane: {other: "시상면 · Sagittal"}
 meetAuthor: {other: "소개 읽기"}
 ctCompare: {other: "원본과 재구성 비교"}
-plateMotion: {other: "마우스 반응 효과"}
