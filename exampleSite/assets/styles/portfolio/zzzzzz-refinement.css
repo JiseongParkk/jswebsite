@@ -35,3 +35,32 @@
 /* Keep equal inner gutters on every interest card, including edge cards. */
 .immersive .interest-card,.immersive .interest-card:first-child,.immersive .interest-card:last-child{padding:28px 32px;min-width:0}
 @media(max-width:900px){.immersive .interest-card,.immersive .interest-card:first-child,.immersive .interest-card:last-child{padding:24px}}
+
+/* Blend the scanner artwork into the hero instead of framing it as a card. */
+.immersive-hero .documentary-mri {
+  max-width: 490px;
+  padding-block: 12px;
+}
+.immersive-hero .documentary-mri .image-index {
+  display: none;
+}
+.immersive-hero .documentary-mri img {
+  width: 100%;
+  max-height: 510px;
+  border-radius: 0;
+  opacity: 0.94;
+  mix-blend-mode: screen;
+  -webkit-mask-image: radial-gradient(ellipse at 52% 48%, #000 44%, #000b 61%, transparent 77%);
+  mask-image: radial-gradient(ellipse at 52% 48%, #000 44%, #000b 61%, transparent 77%);
+}
+.immersive-hero .documentary-mri figcaption {
+  justify-content: center;
+  margin-top: 8px;
+  color: #a6c1c8;
+}
+@media (max-width: 600px) {
+  .immersive-hero .documentary-mri {
+    max-width: 340px;
+    padding-block: 0;
+  }
+}
