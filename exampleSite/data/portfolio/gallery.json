@@ -11,7 +11,7 @@
       "width": 645,
       "height": 702,
       "alt": "머리를 옆에서 본 MRI 시상면. 대뇌와 소뇌, 뇌간의 형태를 보여주는 공개 영상.",
-      "description": "자기장과 고주파를 이용해 얻은 신호로 영상을 만듭니다. 획득한 신호가 영상으로 표현되는 재구성 과정에 관심이 있습니다.",
+      "description": "강한 자기장 속에서 고주파 펄스를 가해 수소 원자핵의 상태를 변화시킵니다. 이후 발생하는 신호를 위치 정보와 함께 측정하고, 조직에 따른 신호 차이를 영상으로 재구성합니다.",
       "credit": "everyone’s idle · CC BY-SA 2.0",
       "source": "https://commons.wikimedia.org/wiki/File:MRI_brain_sagittal_section.jpg"
     },
@@ -23,7 +23,7 @@
       "width": 646,
       "height": 468,
       "alt": "머리의 가로 단면을 보여주는 CT 축상면. 두개골 경계와 뇌 조직을 관찰하는 공개 영상.",
-      "description": "여러 방향에서 측정한 X선 투과 정보를 단면 영상으로 재구성합니다. 투영 데이터와 단면 사이의 관계를 이해하고 싶습니다.",
+      "description": "X선원과 검출기가 몸 주위를 회전하며 여러 방향의 X선 투과량을 측정합니다. 조직마다 X선을 약화시키는 정도가 다른 점을 이용해, 컴퓨터가 측정값으로 단면 영상을 재구성합니다.",
       "credit": "Mikael Häggström, M.D. · CC0 1.0",
       "source": "https://commons.wikimedia.org/wiki/File:CT_of_a_normal_brain,_axial_14.png"
     }
