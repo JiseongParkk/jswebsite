@@ -1,0 +1,10 @@
+{
+  "title": "축소 SSDM을 이용한 가속 MRI 재구성 비교",
+  "intro": "320 × 320 MRI에서 축소 SSDM과 zero-filled 복원을 비교했습니다. 검증용 영상으로 설정을 선택하고, 별도 16개 영상에서 R8·R16의 결과를 평가했습니다.",
+  "status": "실행·평가 완료 · 결과 정리 2026.11.03",
+  "image": "images/projects/ssdm/comparison.png",
+  "repo": "https://github.com/JiseongParkk/jswebsite/tree/main/projects/compact-ssdm-mri",
+  "notebook": "downloads/compact-ssdm-mri.ipynb",
+  "result": "평균 PSNR은 R8에서 22.8921 dB, R16에서 22.2968 dB로, zero-filled 대비 각각 0.0772 dB와 0.2662 dB 낮았습니다. 개선 사례는 각각 7/16, 4/16이었습니다.",
+  "details": "개인 학습 · AI 보조 구현. 8성분 축소 모델, 검증 4개·최종 평가 16개, 100-step 샘플러를 사용했습니다. 초기 학습 이후 CDL·학습량·샘플러를 개선했으며, 이번 최종 평가에서는 평균 성능 향상을 확인하지 못했습니다. 다음 실습에서는 손실·정규화·샘플링 조건을 나누어 비교할 계획입니다. 원시 데이터와 가중치는 별도 환경이 필요합니다."
+}

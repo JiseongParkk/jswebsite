@@ -1,0 +1,6 @@
+{{ if site.Params.medicalPortfolio.ctProject }}{{ with site.Data.portfolio.ssdm }}
+<section class="section ssdm-project" id="ssdm-project" aria-labelledby="ssdm-title"><div class="wrap">
+<p class="eyebrow">{{ i18n "ssdmEyebrow" }}</p><div class="section-head"><div><h2 class="section-heading" id="ssdm-title">{{ .title }}</h2><p class="lede">{{ .intro }}</p></div><span class="pill">{{ .status }}</span></div>
+<figure><img src="{{ .image | relURL }}" alt="{{ i18n "ssdmAlt" }}" loading="lazy" width="1950" height="1050"></figure>
+<p class="project-summary">{{ .result }}</p><p class="lede">{{ .details }}</p><div class="links project-links"><a class="button primary" href="{{ .repo }}">{{ i18n "ctCode" }} ↗</a><a class="button" href="{{ .notebook | relURL }}" download>{{ i18n "ctNotebook" }} ↓</a></div>
+</div></section>{{ end }}{{ end }}

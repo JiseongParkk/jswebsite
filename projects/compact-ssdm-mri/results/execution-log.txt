@@ -1,0 +1,399 @@
+CELL 0
+Mounted at /content/drive
+GPU: Tesla T4 | torch: 2.11.0+cu130
+Sources installed: /content/ssdm_paper
+Source bundle SHA256: 792e0632e814c4975a3fd702e8e56bc2a51548a5011bb68b35e4410da1bdb7bf
+실험: 320x320 / 8성분 / 축소 U-Net / 검증 설정 선택 / 분리된 최종 평가
+
+
+CELL 1
+Compact experiment: /content/drive/MyDrive/SSDM320_full_run/compact320_20261023 train 11029 dev4 / final8 disjoint volumes
+
+
+CELL 2
+Frozen train-only component scale: 0.053315447148167154
+MEMORY PREFLIGHT {"parameters": 23151810, "seconds_per_step": 2.069342851638794, "steps": [{"noise": 1.0016154050827026, "reconstruction": 4580.83447265625, "grad": 22.03359031677246, "updated": true}, {"noise": 0.9928908944129944, "reconstruction": 3.2058095932006836, "grad": 2.9755334854125977, "updated": true}, {"noise": 0.9823054075241089, "reconstruction": 30.97321128845215, "grad": 3.678203582763672, "updated": true}], "system_used_GiB": 2.662, "process_RSS_GiB": 2.11, "GPU_peak_GiB": 3.321}
+
+
+CELL 3
+{
+  "schema": 1,
+  "seed": 20261023,
+  "architecture": {
+    "image_size": 320,
+    "subspaces": 8,
+    "model_channels": 64,
+    "num_res_blocks": 1,
+    "channel_mult": [
+      1,
+      1,
+      2,
+      2,
+      4,
+      4
+    ],
+    "attention_downsample_factors": [
+      20
+    ],
+    "num_head_channels": 32,
+    "cross_attention_heads": 4,
+    "dropout": 0.0,
+    "use_checkpoint": true
+  },
+  "cdl_sha256": "495d04de7d87a340b3ffd70887c1a4723e76f5eef224263b25e1f42b34ec5d98",
+  "cdl_updates": 1600,
+  "cdl_completed": false,
+  "train_index_hash": "67aeb89deeb8a5f2fd1116491774a06c679a8d216e43212120715a4e1ac15b6b",
+  "train_volumes": 310,
+  "train_slices": 11029,
+  "dev": [
+    {
+      "file": "file1001122.h5",
+      "slice": 18
+    },
+    {
+      "file": "file1001793.h5",
+      "slice": 17
+    },
+    {
+      "file": "file1001450.h5",
+      "slice": 17
+    },
+    {
+      "file": "file1000635.h5",
+      "slice": 19
+    }
+  ],
+  "final": [
+    {
+      "file": "file1001818.h5",
+      "slice": 17
+    },
+    {
+      "file": "file1001968.h5",
+      "slice": 19
+    },
+    {
+      "file": "file1000748.h5",
+      "slice": 16
+    },
+    {
+      "file": "file1002021.h5",
+      "slice": 18
+    },
+    {
+      "file": "file1002380.h5",
+      "slice": 15
+    },
+    {
+      "file": "file1001850.h5",
+      "slice": 19
+    },
+    {
+      "file": "file1001499.h5",
+      "slice": 15
+    },
+    {
+      "file": "file1001191.h5",
+      "slice": 16
+    }
+  ],
+  "excluded_previously_seen": [
+    "file1000178.h5",
+    "file1000932.h5"
+  ],
+  "candidates": {
+    "lr1e-4": 0.0001,
+    "lr3e-4": 0.0003
+  },
+  "screen_updates": 300,
+  "selected_target_updates": 900,
+  "reconstruction_weight": 0.001,
+  "component_scale": 0.053315447148167154,
+  "normalization": "one common RMS estimated from32 train slices; y/anchors scaled identically",
+  "sampling": {
+    "inference_steps": 100,
+    "sigma_schedule": "paper_literal"
+  },
+  "selection_metric": "mean development PSNR over R8 and R16",
+  "image_size": 320,
+  "components": 8,
+  "slice_policy": "one middle slice per volume",
+  "paper_reproduction": false,
+  "complete_training_archive": false,
+  "notes": "Unpublished choices are declared; LR selected on dev only. Final volumes never guide selection."
+}
+학습률 후보: 1e-4, 3e-4 / 검증4개 / 최종평가8개
+최종평가 영상은 설정 선택에 사용하지 않습니다.
+
+
+CELL 4
+Frozen train-only component scale: 0.053315447148167154
+TRAIN lr1e-4 0 -> 300
+lr1e-4 step 1 noise 1.00162 rec 4580.73975 sec/update 2.35
+lr1e-4 step 2 noise 0.99324 rec 3.16359 sec/update 2.51
+lr1e-4 step 25 noise 0.71079 rec 43.90043 sec/update 2.09
+lr1e-4 step 50 noise 0.42892 rec 26.29364 sec/update 2.05
+lr1e-4 step 75 noise 0.24944 rec 5.22801 sec/update 2.01
+lr1e-4 step 100 noise 0.0993 rec 10053.60352 sec/update 1.97
+lr1e-4 step 125 noise 0.03673 rec 24.51105 sec/update 1.96
+lr1e-4 step 150 noise 0.01518 rec 2445.78125 sec/update 1.92
+lr1e-4 step 175 noise 0.1502 rec 2.44089 sec/update 1.91
+lr1e-4 step 200 noise 0.00815 rec 61.90791 sec/update 1.9
+lr1e-4 step 225 noise 0.01051 rec 5.58132 sec/update 1.92
+lr1e-4 step 250 noise 0.00674 rec 30.699 sec/update 1.9
+lr1e-4 step 275 noise 0.00811 rec 59.92744 sec/update 1.88
+lr1e-4 step 300 noise 0.00575 rec 94.92383 sec/update 1.87
+EVAL dev lr1e-4 file1001122.h5 R 8 SSDM {'PSNR': 9.420284169204635, 'SSIM': 0.022741864119314444, 'MAE': 0.23092358701667365} ZF {'PSNR': 25.089800382585658, 'SSIM': 0.4681826348118027, 'MAE': 0.039662975087088624}
+EVAL dev lr1e-4 file1001122.h5 R 16 SSDM {'PSNR': 6.640923719558653, 'SSIM': 0.011240946555818726, 'MAE': 0.3282586233578456} ZF {'PSNR': 24.687814032388356, 'SSIM': 0.41350649274322404, 'MAE': 0.04140468502746792}
+EVAL dev lr1e-4 file1001793.h5 R 8 SSDM {'PSNR': 9.329683513338358, 'SSIM': 0.024116831281926984, 'MAE': 0.2243572264171786} ZF {'PSNR': 23.555063673766657, 'SSIM': 0.46879943417412145, 'MAE': 0.04803672583249153}
+EVAL dev lr1e-4 file1001793.h5 R 16 SSDM {'PSNR': 6.588983500782515, 'SSIM': 0.011033853798115174, 'MAE': 0.32311271443080214} ZF {'PSNR': 23.38032132677808, 'SSIM': 0.43192321488070534, 'MAE': 0.04874394648843662}
+EVAL dev lr1e-4 file1001450.h5 R 8 SSDM {'PSNR': 8.854285877510677, 'SSIM': 0.026945583609127736, 'MAE': 0.24354299618738337} ZF {'PSNR': 23.49905591625189, 'SSIM': 0.37315709485527376, 'MAE': 0.049710655306375175}
+EVAL dev lr1e-4 file1001450.h5 R 16 SSDM {'PSNR': 6.270324064511406, 'SSIM': 0.011852040561843417, 'MAE': 0.3428793888850255} ZF {'PSNR': 23.166267258216582, 'SSIM': 0.3284820043699965, 'MAE': 0.051328706161679206}
+EVAL dev lr1e-4 file1000635.h5 R 8 SSDM {'PSNR': 10.385045645617106, 'SSIM': 0.04496970210651165, 'MAE': 0.21167115227370614} ZF {'PSNR': 21.622422750846226, 'SSIM': 0.4638672857315502, 'MAE': 0.05768074219071068}
+EVAL dev lr1e-4 file1000635.h5 R 16 SSDM {'PSNR': 6.386133989387356, 'SSIM': 0.015115657243533646, 'MAE': 0.3400338881851415} ZF {'PSNR': 21.33171611447885, 'SSIM': 0.414508271156912, 'MAE': 0.059257669460665345}
+Frozen train-only component scale: 0.053315447148167154
+TRAIN lr3e-4 0 -> 300
+lr3e-4 step 1 noise 1.00162 rec 4580.73975 sec/update 1.01
+lr3e-4 step 2 noise 0.97833 rec 3.11681 sec/update 1.0
+lr3e-4 step 25 noise 0.28121 rec 17.47235 sec/update 1.02
+lr3e-4 step 50 noise 0.02161 rec 1.4695 sec/update 1.03
+lr3e-4 step 75 noise 0.05831 rec 2.32126 sec/update 1.03
+lr3e-4 step 100 noise 0.00978 rec 1153.97729 sec/update 1.04
+lr3e-4 step 125 noise 0.01163 rec 9.57664 sec/update 1.05
+lr3e-4 step 150 noise 0.00632 rec 1111.51062 sec/update 1.09
+lr3e-4 step 175 noise 0.14453 rec 2.36166 sec/update 1.08
+lr3e-4 step 200 noise 0.00702 rec 147.76384 sec/update 1.08
+lr3e-4 step 225 noise 0.0086 rec 5.13703 sec/update 1.1
+lr3e-4 step 250 noise 0.00608 rec 39.81304 sec/update 1.11
+lr3e-4 step 275 noise 0.00511 rec 21.3924 sec/update 1.1
+lr3e-4 step 300 noise 0.00513 rec 89.86099 sec/update 1.1
+EVAL dev lr3e-4 file1001122.h5 R 8 SSDM {'PSNR': 16.248191218061116, 'SSIM': 0.09982351137230225, 'MAE': 0.10543800699856717} ZF {'PSNR': 25.089800382585658, 'SSIM': 0.4681826348118027, 'MAE': 0.039662975087088624}
+EVAL dev lr3e-4 file1001122.h5 R 16 SSDM {'PSNR': 14.83347870462564, 'SSIM': 0.06995908638760545, 'MAE': 0.12254202252741407} ZF {'PSNR': 24.687814032388356, 'SSIM': 0.41350649274322404, 'MAE': 0.04140468502746792}
+EVAL dev lr3e-4 file1001793.h5 R 8 SSDM {'PSNR': 15.796034674848062, 'SSIM': 0.09616050609050014, 'MAE': 0.11145768907239073} ZF {'PSNR': 23.555063673766657, 'SSIM': 0.46879943417412145, 'MAE': 0.04803672583249153}
+EVAL dev lr3e-4 file1001793.h5 R 16 SSDM {'PSNR': 14.992434208473775, 'SSIM': 0.06685442363510774, 'MAE': 0.12334994642946129} ZF {'PSNR': 23.38032132677808, 'SSIM': 0.43192321488070534, 'MAE': 0.04874394648843662}
+EVAL dev lr3e-4 file1001450.h5 R 8 SSDM {'PSNR': 16.551365100959224, 'SSIM': 0.12508621420847557, 'MAE': 0.09895882674270552} ZF {'PSNR': 23.49905591625189, 'SSIM': 0.37315709485527376, 'MAE': 0.049710655306375175}
+EVAL dev lr3e-4 file1001450.h5 R 16 SSDM {'PSNR': 14.943040257683588, 'SSIM': 0.08332312200644001, 'MAE': 0.11729697890306852} ZF {'PSNR': 23.166267258216582, 'SSIM': 0.3284820043699965, 'MAE': 0.051328706161679206}
+EVAL dev lr3e-4 file1000635.h5 R 8 SSDM {'PSNR': 15.25432750098277, 'SSIM': 0.12192453859372458, 'MAE': 0.1249519355675055} ZF {'PSNR': 21.622422750846226, 'SSIM': 0.4638672857315502, 'MAE': 0.05768074219071068}
+EVAL dev lr3e-4 file1000635.h5 R 16 SSDM {'PSNR': 13.577173178702669, 'SSIM': 0.07385787327415631, 'MAE': 0.15119042668249263} ZF {'PSNR': 21.33171611447885, 'SSIM': 0.414508271156912, 'MAE': 0.059257669460665345}
+Development-selected learning rate: 0.0003
+Frozen train-only component scale: 0.053315447148167154
+TRAIN lr3e-4 300 -> 900
+lr3e-4 step 301 noise 0.00485 rec 30.05836 sec/update 1.04
+lr3e-4 step 302 noise 0.05399 rec 1.31978 sec/update 1.04
+lr3e-4 step 325 noise 0.02275 rec 5.77952 sec/update 1.76
+lr3e-4 step 350 noise 0.00398 rec 8.32547 sec/update 1.81
+lr3e-4 step 375 noise 0.03172 rec 1.84382 sec/update 1.74
+lr3e-4 step 400 noise 0.00322 rec 112.40693 sec/update 1.69
+lr3e-4 step 425 noise 0.0509 rec 0.41612 sec/update 1.76
+lr3e-4 step 450 noise 0.00272 rec 68.03755 sec/update 1.71
+lr3e-4 step 475 noise 0.00534 rec 9.42549 sec/update 1.7
+lr3e-4 step 500 noise 0.01484 rec 1.69892 sec/update 1.69
+lr3e-4 step 525 noise 0.00257 rec 64.44593 sec/update 1.69
+lr3e-4 step 550 noise 0.02715 rec 1.5274 sec/update 1.67
+lr3e-4 step 575 noise 0.01047 rec 0.82232 sec/update 1.67
+lr3e-4 step 600 noise 0.00213 rec 60.40727 sec/update 1.64
+lr3e-4 step 625 noise 0.00253 rec 69.1274 sec/update 1.64
+lr3e-4 step 650 noise 0.75829 rec 0.09443 sec/update 1.62
+lr3e-4 step 675 noise 0.00348 rec 11.5644 sec/update 1.61
+lr3e-4 step 700 noise 0.26226 rec 1.27551 sec/update 1.6
+lr3e-4 step 725 noise 0.00199 rec 44.56864 sec/update 1.61
+lr3e-4 step 750 noise 0.6502 rec 0.1885 sec/update 1.61
+lr3e-4 step 775 noise 0.01698 rec 2.53564 sec/update 1.6
+lr3e-4 step 800 noise 0.00274 rec 8.56464 sec/update 1.59
+lr3e-4 step 825 noise 0.09978 rec 0.40014 sec/update 1.59
+lr3e-4 step 850 noise 0.01061 rec 2.62083 sec/update 1.6
+lr3e-4 step 875 noise 0.34896 rec 0.32706 sec/update 1.59
+lr3e-4 step 900 noise 0.00133 rec 95.35636 sec/update 1.58
+EVAL dev lr3e-4 file1001122.h5 R 8 SSDM {'PSNR': 22.262446093881962, 'SSIM': 0.29139014699758403, 'MAE': 0.05695475889872483} ZF {'PSNR': 25.089800382585658, 'SSIM': 0.4681826348118027, 'MAE': 0.039662975087088624}
+EVAL dev lr3e-4 file1001122.h5 R 16 SSDM {'PSNR': 21.797609094475227, 'SSIM': 0.2491903812157707, 'MAE': 0.05991367063789923} ZF {'PSNR': 24.687814032388356, 'SSIM': 0.41350649274322404, 'MAE': 0.04140468502746792}
+EVAL dev lr3e-4 file1001793.h5 R 8 SSDM {'PSNR': 20.089637650085933, 'SSIM': 0.21852967558135397, 'MAE': 0.07609874426198387} ZF {'PSNR': 23.555063673766657, 'SSIM': 0.46879943417412145, 'MAE': 0.04803672583249153}
+EVAL dev lr3e-4 file1001793.h5 R 16 SSDM {'PSNR': 20.13047430908198, 'SSIM': 0.19247114795582163, 'MAE': 0.075553845073822} ZF {'PSNR': 23.38032132677808, 'SSIM': 0.43192321488070534, 'MAE': 0.04874394648843662}
+EVAL dev lr3e-4 file1001450.h5 R 8 SSDM {'PSNR': 21.212882690273066, 'SSIM': 0.2419560329481837, 'MAE': 0.0660251238046861} ZF {'PSNR': 23.49905591625189, 'SSIM': 0.37315709485527376, 'MAE': 0.049710655306375175}
+EVAL dev lr3e-4 file1001450.h5 R 16 SSDM {'PSNR': 20.937024013222867, 'SSIM': 0.2097490639033462, 'MAE': 0.06763677843089028} ZF {'PSNR': 23.166267258216582, 'SSIM': 0.3284820043699965, 'MAE': 0.051328706161679206}
+EVAL dev lr3e-4 file1000635.h5 R 8 SSDM {'PSNR': 19.205718861648286, 'SSIM': 0.2718412695370739, 'MAE': 0.08134219547803255} ZF {'PSNR': 21.622422750846226, 'SSIM': 0.4638672857315502, 'MAE': 0.05768074219071068}
+EVAL dev lr3e-4 file1000635.h5 R 16 SSDM {'PSNR': 18.73875918860006, 'SSIM': 0.2351734501596812, 'MAE': 0.08468318313157014} ZF {'PSNR': 21.33171611447885, 'SSIM': 0.414508271156912, 'MAE': 0.059257669460665345}
+선택 완료: lr3e-4 학습 횟수: 900
+
+
+CELL 5
+고정된 모델: lr3e-4 900
+복원: 100-step DDIM + CG + 전역 측정 일치 + resampling
+
+
+CELL 6
+EVAL final lr3e-4 file1001818.h5 R 8 SSDM {'PSNR': 18.88519965516782, 'SSIM': 0.21194935819663888, 'MAE': 0.08819799876227875} ZF {'PSNR': 20.354885773073732, 'SSIM': 0.2797733055512698, 'MAE': 0.07577529533201727}
+EVAL final lr3e-4 file1001818.h5 R 16 SSDM {'PSNR': 18.440237001363617, 'SSIM': 0.14243510627932227, 'MAE': 0.09279834154437211} ZF {'PSNR': 19.767724942479227, 'SSIM': 0.18941415415530016, 'MAE': 0.0814822009573794}
+EVAL final lr3e-4 file1001968.h5 R 8 SSDM {'PSNR': 21.233150190256215, 'SSIM': 0.2596187696418489, 'MAE': 0.06489392619333031} ZF {'PSNR': 23.77348156604623, 'SSIM': 0.39536620742143325, 'MAE': 0.047838688660106356}
+EVAL final lr3e-4 file1001968.h5 R 16 SSDM {'PSNR': 21.17106643527787, 'SSIM': 0.24276019393102624, 'MAE': 0.06478418981878263} ZF {'PSNR': 23.54645183468927, 'SSIM': 0.34895561010139026, 'MAE': 0.049185395359601924}
+EVAL final lr3e-4 file1000748.h5 R 8 SSDM {'PSNR': 20.032755421611625, 'SSIM': 0.22429805002082673, 'MAE': 0.07684921918177451} ZF {'PSNR': 22.095451831074477, 'SSIM': 0.34639958312375074, 'MAE': 0.05915809865286519}
+EVAL final lr3e-4 file1000748.h5 R 16 SSDM {'PSNR': 19.6266740821548, 'SSIM': 0.18385461908204265, 'MAE': 0.07988736049309693} ZF {'PSNR': 21.809113574330674, 'SSIM': 0.2857306813284052, 'MAE': 0.060812785401432166}
+EVAL final lr3e-4 file1002021.h5 R 8 SSDM {'PSNR': 20.689658375145612, 'SSIM': 0.2964096029533105, 'MAE': 0.06882873878378745} ZF {'PSNR': 22.32841080452266, 'SSIM': 0.552322613776427, 'MAE': 0.05245450190317484}
+EVAL final lr3e-4 file1002021.h5 R 16 SSDM {'PSNR': 19.542469342776446, 'SSIM': 0.24285050144736445, 'MAE': 0.07764232071661638} ZF {'PSNR': 21.58401982160636, 'SSIM': 0.5240419453814501, 'MAE': 0.056381126902498975}
+EVAL final lr3e-4 file1002380.h5 R 8 SSDM {'PSNR': 20.564347820923018, 'SSIM': 0.2237224202742855, 'MAE': 0.07290900052186317} ZF {'PSNR': 21.98287495395651, 'SSIM': 0.30180589970177, 'MAE': 0.06276272906367247}
+EVAL final lr3e-4 file1002380.h5 R 16 SSDM {'PSNR': 20.11637003025996, 'SSIM': 0.17881128439951482, 'MAE': 0.07628220507723213} ZF {'PSNR': 21.567156960558652, 'SSIM': 0.23497615331703656, 'MAE': 0.06599995347968701}
+EVAL final lr3e-4 file1001850.h5 R 8 SSDM {'PSNR': 23.6561926586634, 'SSIM': 0.3365091410445253, 'MAE': 0.04860322704724226} ZF {'PSNR': 25.81068887788774, 'SSIM': 0.4974878079483045, 'MAE': 0.03629035407400991}
+EVAL final lr3e-4 file1001850.h5 R 16 SSDM {'PSNR': 22.77517467532906, 'SSIM': 0.2878286995686516, 'MAE': 0.05273934456773688} ZF {'PSNR': 25.30428996625282, 'SSIM': 0.45896268538340024, 'MAE': 0.037928138116463825}
+EVAL final lr3e-4 file1001499.h5 R 8 SSDM {'PSNR': 21.299446905283865, 'SSIM': 0.25640604056528876, 'MAE': 0.0660443259498291} ZF {'PSNR': 23.024902039283432, 'SSIM': 0.34852767991893635, 'MAE': 0.05497904138672936}
+EVAL final lr3e-4 file1001499.h5 R 16 SSDM {'PSNR': 20.638859284827703, 'SSIM': 0.1874642176522056, 'MAE': 0.07053845599105785} ZF {'PSNR': 22.44247590859121, 'SSIM': 0.2620050645423047, 'MAE': 0.05895756255321103}
+EVAL final lr3e-4 file1001191.h5 R 8 SSDM {'PSNR': 21.05569933341688, 'SSIM': 0.24641932540717487, 'MAE': 0.06691716803227762} ZF {'PSNR': 24.094668732292718, 'SSIM': 0.42203573988025983, 'MAE': 0.04551825008291296}
+EVAL final lr3e-4 file1001191.h5 R 16 SSDM {'PSNR': 20.494098986991567, 'SSIM': 0.20489446222738739, 'MAE': 0.07046790613501173} ZF {'PSNR': 23.7866784849623, 'SSIM': 0.36567212246866404, 'MAE': 0.04698245841758208}
+최종 평가 완료: True
+
+
+CELL 7
+R 8 mean paired PSNR change -2.0061 dB; wins 0 / 8
+R 16 mean paired PSNR change -2.1254 dB; wins 0 / 8
+ R      method  n      PSNR     SSIM      MAE
+ 8 zero_filled  8 22.933171 0.392965 0.054347
+ 8        ssdm  8 20.927056 0.256917 0.069155
+16 zero_filled  8 22.475989 0.333720 0.057216
+16        ssdm  8 20.350619 0.208862 0.073143
+Reduced-width SSDM; partial CDL and training data. Full paper reproduction: False.
+
+
+CELL 7
+비교 영상: /content/drive/MyDrive/SSDM320_full_run/compact320_20261023/comparison.png
+
+
+CELL 8
+Sampler numerical checks passed. These checks do not establish image quality.
+{'cg_analytic_relative_error': 1.7912407201947644e-07, 'cg_normal_relative_residual': 9.02853187767505e-08, 'global_dc_relative_error': 4.0901551301431027e-07, 'max_subject_dc_relative_error': 4.115267131510336e-07, 'unobserved_frequency_relative_change': 1.2271617322312522e-07, 'resample_mean_error': -0.0034077689051628113, 'resample_variance_ratio': 0.9993693828582764, 'zero_epsilon_100step_dc': 1.0869470088437083e-06}
+CDL DIAGNOSTIC {'file': 'file1001122.h5', 'cdl_rel_error': 0.04069390892982483, 'PSNR': 43.27922232040524, 'SSIM': 0.985257855899916, 'MAE': 0.004634541679861996}
+CDL DIAGNOSTIC {'file': 'file1001793.h5', 'cdl_rel_error': 0.02503519505262375, 'PSNR': 45.003588544596305, 'SSIM': 0.994282652893479, 'MAE': 0.003511732095793718}
+CDL DIAGNOSTIC {'file': 'file1001450.h5', 'cdl_rel_error': 0.03480681777000427, 'PSNR': 44.70171783067664, 'SSIM': 0.9956985244193385, 'MAE': 0.004251683356430078}
+CDL DIAGNOSTIC {'file': 'file1000635.h5', 'cdl_rel_error': 0.021509788930416107, 'PSNR': 42.89691804833795, 'SSIM': 0.9826773858522148, 'MAE': 0.005154452133390706}
+DIAGNOSTIC COMPLETE
+
+
+CELL 9
+Mounted at /content/drive
+Drive ready: True
+
+
+CELL 10
+개선 모듈 준비 완료
+
+
+CELL 11
+Compact experiment: /content/drive/MyDrive/SSDM320_full_run/compact320_20261023 train 11029 dev4 / final8 disjoint volumes
+저장된 진행: {
+  "updates": 6000,
+  "attempts": 6000,
+  "last": {
+    "noise": 0.0030263543594628572,
+    "reconstruction": 4.441753387451172,
+    "grad": 0.776818573474884,
+    "updated": true
+  },
+  "system_used_GiB": 2.853,
+  "process_RSS_GiB": 2.049,
+  "GPU_peak_GiB": 3.343
+}
+DIFFUSION READY CDL extra 1000 scale 0.05468132945688502
+LOCAL CACHE file1001122.h5 25.4 MiB
+V2 EVAL dev sampler1 3000 file1001122.h5 8 deltaPSNR -1.535
+V2 EVAL dev sampler1 3000 file1001122.h5 16 deltaPSNR -1.418
+LOCAL CACHE file1001793.h5 24.2 MiB
+V2 EVAL dev sampler1 3000 file1001793.h5 8 deltaPSNR -1.46
+V2 EVAL dev sampler1 3000 file1001793.h5 16 deltaPSNR -0.994
+LOCAL CACHE file1001450.h5 24.2 MiB
+V2 EVAL dev sampler1 3000 file1001450.h5 8 deltaPSNR -1.028
+V2 EVAL dev sampler1 3000 file1001450.h5 16 deltaPSNR -0.894
+V2 EVAL dev sampler1 3000 file1000635.h5 8 deltaPSNR -1.181
+V2 EVAL dev sampler1 3000 file1000635.h5 16 deltaPSNR -1.264
+V2 EVAL dev sampler2 3000 file1001122.h5 8 deltaPSNR -0.649
+V2 EVAL dev sampler2 3000 file1001122.h5 16 deltaPSNR -0.736
+V2 EVAL dev sampler2 3000 file1001793.h5 8 deltaPSNR -0.169
+V2 EVAL dev sampler2 3000 file1001793.h5 16 deltaPSNR -0.43
+V2 EVAL dev sampler2 3000 file1001450.h5 8 deltaPSNR -0.538
+V2 EVAL dev sampler2 3000 file1001450.h5 16 deltaPSNR -0.433
+V2 EVAL dev sampler2 3000 file1000635.h5 8 deltaPSNR -0.35
+V2 EVAL dev sampler2 3000 file1000635.h5 16 deltaPSNR -0.625
+V2 EVAL dev sampler3 3000 file1001122.h5 8 deltaPSNR -0.259
+V2 EVAL dev sampler3 3000 file1001122.h5 16 deltaPSNR -0.452
+V2 EVAL dev sampler3 3000 file1001793.h5 8 deltaPSNR -0.258
+V2 EVAL dev sampler3 3000 file1001793.h5 16 deltaPSNR -0.022
+V2 EVAL dev sampler3 3000 file1001450.h5 8 deltaPSNR -0.263
+V2 EVAL dev sampler3 3000 file1001450.h5 16 deltaPSNR -0.4
+V2 EVAL dev sampler3 3000 file1000635.h5 8 deltaPSNR 0.093
+V2 EVAL dev sampler3 3000 file1000635.h5 16 deltaPSNR -0.251
+FROZEN SELECTION {'tag': 'sampler3', 'sampler': {'inference_steps': 100, 'ddim_eta': 0.0, 'gamma': 10000.0, 'resample_every': 1, 'sigma_schedule': 'paper_literal', 'cg_steps': 12, 'cg_rtol': 1e-06, 'gd_steps': 20, 'gd_lr': None, 'gd_rtol': 1e-06}, 'mean_psnr': 23.06485257879046, 'checkpoint_sha256': '3027a060df87a3c9d01b110e061e2808b4ca249f72a33fdf682bc3ee6762d1e1', 'cdl_sha256': '8eb51584337fd7c01eae06393d3892573d1bdcf5a95e54b25345c369a182b8ac', 'candidates': [{'tag': 'sampler0', 'sampler': {'inference_steps': 100, 'ddim_eta': 0.0, 'gamma': 1.0, 'resample_every': 10, 'sigma_schedule': 'paper_literal', 'cg_steps': 12, 'cg_rtol': 1e-06, 'gd_steps': 20, 'gd_lr': None, 'gd_rtol': 1e-06}, 'mean_psnr': 20.300001906415204}, {'tag': 'sampler1', 'sampler': {'inference_steps': 100, 'ddim_eta': 0.0, 'gamma': 100.0, 'resample_every': 10, 'sigma_schedule': 'paper_literal', 'cg_steps': 12, 'cg_rtol': 1e-06, 'gd_steps': 20, 'gd_lr': None, 'gd_rtol': 1e-06}, 'mean_psnr': 22.069751278891893}, {'tag': 'sampler2', 'sampler': {'inference_steps': 100, 'ddim_eta': 0.0, 'gamma': 10000.0, 'resample_every': 10, 'sigma_schedule': 'paper_literal', 'cg_steps': 12, 'cg_rtol': 1e-06, 'gd_steps': 20, 'gd_lr': None, 'gd_rtol': 1e-06}, 'mean_psnr': 22.800192488420556}, {'tag': 'sampler3', 'sampler': {'inference_steps': 100, 'ddim_eta': 0.0, 'gamma': 10000.0, 'resample_every': 1, 'sigma_schedule': 'paper_literal', 'cg_steps': 12, 'cg_rtol': 1e-06, 'gd_steps': 20, 'gd_lr': None, 'gd_rtol': 1e-06}, 'mean_psnr': 23.06485257879046}], 'final_data_used': False}
+DIFFUSION READY CDL extra 1000 scale 0.05468132945688502
+LOCAL CACHE file1002389.h5 27.5 MiB
+V2 EVAL final sampler3 3000 file1002389.h5 8 deltaPSNR -0.384
+V2 EVAL final sampler3 3000 file1002389.h5 16 deltaPSNR -0.649
+LOCAL CACHE file1002187.h5 25.8 MiB
+V2 EVAL final sampler3 3000 file1002187.h5 8 deltaPSNR 0.143
+V2 EVAL final sampler3 3000 file1002187.h5 16 deltaPSNR 0.077
+LOCAL CACHE file1001188.h5 24.4 MiB
+V2 EVAL final sampler3 3000 file1001188.h5 8 deltaPSNR -0.493
+V2 EVAL final sampler3 3000 file1001188.h5 16 deltaPSNR -0.454
+LOCAL CACHE file1001834.h5 27.9 MiB
+V2 EVAL final sampler3 3000 file1001834.h5 8 deltaPSNR -0.726
+V2 EVAL final sampler3 3000 file1001834.h5 16 deltaPSNR -0.669
+LOCAL CACHE file1000243.h5 23.1 MiB
+V2 EVAL final sampler3 3000 file1000243.h5 8 deltaPSNR -0.05
+V2 EVAL final sampler3 3000 file1000243.h5 16 deltaPSNR -0.27
+LOCAL CACHE file1001064.h5 26.4 MiB
+V2 EVAL final sampler3 3000 file1001064.h5 8 deltaPSNR 0.199
+V2 EVAL final sampler3 3000 file1001064.h5 16 deltaPSNR -0.076
+LOCAL CACHE file1001096.h5 23.8 MiB
+V2 EVAL final sampler3 3000 file1001096.h5 8 deltaPSNR 0.428
+V2 EVAL final sampler3 3000 file1001096.h5 16 deltaPSNR 0.196
+LOCAL CACHE file1001715.h5 23.1 MiB
+V2 EVAL final sampler3 3000 file1001715.h5 8 deltaPSNR 0.156
+V2 EVAL final sampler3 3000 file1001715.h5 16 deltaPSNR -0.06
+LOCAL CACHE file1000263.h5 24.5 MiB
+V2 EVAL final sampler3 3000 file1000263.h5 8 deltaPSNR -0.042
+V2 EVAL final sampler3 3000 file1000263.h5 16 deltaPSNR -0.14
+LOCAL CACHE file1002570.h5 23.1 MiB
+V2 EVAL final sampler3 3000 file1002570.h5 8 deltaPSNR 0.525
+V2 EVAL final sampler3 3000 file1002570.h5 16 deltaPSNR -0.367
+LOCAL CACHE file1002412.h5 24.3 MiB
+V2 EVAL final sampler3 3000 file1002412.h5 8 deltaPSNR -0.27
+V2 EVAL final sampler3 3000 file1002412.h5 16 deltaPSNR -0.293
+LOCAL CACHE file1001506.h5 23.5 MiB
+V2 EVAL final sampler3 3000 file1001506.h5 8 deltaPSNR -1.0
+V2 EVAL final sampler3 3000 file1001506.h5 16 deltaPSNR -1.594
+LOCAL CACHE file1002159.h5 23.2 MiB
+V2 EVAL final sampler3 3000 file1002159.h5 8 deltaPSNR -0.418
+V2 EVAL final sampler3 3000 file1002159.h5 16 deltaPSNR -0.469
+LOCAL CACHE file1000537.h5 24.2 MiB
+V2 EVAL final sampler3 3000 file1000537.h5 8 deltaPSNR 0.944
+V2 EVAL final sampler3 3000 file1000537.h5 16 deltaPSNR 0.717
+LOCAL CACHE file1001159.h5 21.6 MiB
+V2 EVAL final sampler3 3000 file1001159.h5 8 deltaPSNR -0.443
+V2 EVAL final sampler3 3000 file1001159.h5 16 deltaPSNR -0.339
+LOCAL CACHE file1001429.h5 29.4 MiB
+V2 EVAL final sampler3 3000 file1001429.h5 8 deltaPSNR 0.196
+V2 EVAL final sampler3 3000 file1001429.h5 16 deltaPSNR 0.13
+FINAL 8 paired PSNR delta -0.07721115442853321 wins 7 / 16
+FINAL 16 paired PSNR delta -0.2662199773384888 wins 4 / 16
+ R      method  n      PSNR     SSIM      MAE
+ 8 zero_filled 16 22.969293 0.440291 0.052154
+ 8        ssdm 16 22.892082 0.404317 0.053688
+16 zero_filled 16 22.562988 0.395169 0.054191
+16        ssdm 16 22.296768 0.345873 0.056800
+
+
+CELL 12
+최종 평가 완료: True | 평가 건수: 32
+selection.json 저장됨: True | bytes: 2059
+final_results.json 저장됨: True | bytes: 12715
+summary.json 저장됨: True | bytes: 5589
+comparison.png 저장됨: True | bytes: 2604011
+RAM used GiB: 2.73
+Python RSS GiB: 1.75
+
+
+CELL 13
+ R      method  n      PSNR     SSIM      MAE
+ 8 zero_filled 16 22.969293 0.440291 0.052154
+ 8        ssdm 16 22.892082 0.404317 0.053688
+16 zero_filled 16 22.562988 0.395169 0.054191
+16        ssdm 16 22.296768 0.345873 0.056800
+
+
+CELL 13
+Reduced model; partial training. Final evaluation uses 16 new volumes.

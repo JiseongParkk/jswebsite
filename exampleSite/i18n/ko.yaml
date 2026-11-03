@@ -35,3 +35,6 @@ mriPlate: {other: "MRI / 01"}
 mriPlane: {other: "시상면 · Sagittal"}
 meetAuthor: {other: "소개 읽기"}
 ctCompare: {other: "원본과 재구성 비교"}
+
+ssdmEyebrow: {other: "개인 실습 · MRI 재구성"}
+ssdmAlt: {other: "개선 실험의 R8 및 R16 MRI 정답, zero-filled, 축소 SSDM과 절대 오차 비교. 평균 성능은 zero-filled보다 낮음."}
